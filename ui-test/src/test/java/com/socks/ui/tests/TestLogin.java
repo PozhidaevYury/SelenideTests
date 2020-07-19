@@ -8,7 +8,7 @@ import static com.codeborne.selenide.Condition.*;
 
 public class TestLogin extends BaseUITest {
 
-    private final LoggedUserPage loggedUserPage = at(LoggedUserPage.class);
+
 
     @Test
     public void userCanLoginWithValidData() {
@@ -16,6 +16,8 @@ public class TestLogin extends BaseUITest {
 
         MainPage.open()
                 .loginAs("hello", "12345");
+
+        LoggedUserPage loggedUserPage = at(LoggedUserPage.class);
 
         loggedUserPage.logoutBtn().shouldHave(text("Logout"));
         loggedUserPage.userName().shouldHave(text("Logged in as"));

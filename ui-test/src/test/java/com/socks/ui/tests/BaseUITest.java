@@ -4,15 +4,19 @@ import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 import org.testng.annotations.BeforeSuite;
 
+import static com.codeborne.selenide.Configuration.baseUrl;
+import static com.codeborne.selenide.Configuration.browser;
+
 public class BaseUITest {
 
     @BeforeSuite
     public void setUp() {
-        Configuration.baseUrl = "http://46.101.203.68";
-       // Configuration.browser = "chrome";
+        baseUrl = "http://46.101.203.68";
+        browser = "com.socks.ui.SelenoidDriverProvider";
+        //browser = "chrome";
     }
 
-    protected <T> T at(Class<T> pageClass){
+    protected <T> T at(Class<T> pageClass) {
         return Selenide.page(pageClass);
     }
 }
