@@ -7,7 +7,7 @@ node {
     }
 
     stage("run ui tests") {
-        sh "./gradlew ui-test:test -Dlogging=${LOGGING}"
+        sh "./gradlew ui :test -Dlogging=${LOGGING}"
     }
 
     allure([
