@@ -1,10 +1,11 @@
 package com.socks.tests;
 
 import com.github.javafaker.Faker;
+import com.socks.api.ApiConfig;
 import com.socks.api.model.User;
-import com.socks.api.response.UserRegistrationResponse;
 import com.socks.api.services.UserApiService;
 import io.restassured.RestAssured;
+import org.aeonbits.owner.ConfigFactory;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -18,11 +19,13 @@ import static org.hamcrest.Matchers.not;
 public class UsersTest {
 
     private final UserApiService userApiService = new UserApiService();
-    private final Faker faker = new Faker(new Locale("ru"));
+    private Faker faker;
 
     @BeforeClass
     public void setUp() {
-        RestAssured.baseURI = "http://46.101.203.68";
+        ApiConfig config = ConfigFactory.create(ApiConfig.class, System.getProperties());
+        faker = new Faker(new Locale(config.locale()));
+        RestAssured.baseURI = config.baseUrl();
     }
 
     @Test
@@ -32,17 +35,16 @@ public class UsersTest {
                 .email("test@gmail.com")
                 .password("test123");
 
-
         userApiService.registerUser(user)
                 .shouldHave(statusCode(200))
                 .shouldHave(body("id", not(emptyString())));
 
 
-      // UserRegistrationResponse userRegistrationResponse = userApiService.registerUser(user)
-      //          .shouldHave(statusCode(200))
-      //          .asPojo(UserRegistrationResponse.class);
+        // UserRegistrationResponse userRegistrationResponse = userApiService.registerUser(user)
+        //          .shouldHave(statusCode(200))
+        //          .asPojo(UserRegistrationResponse.class);
 //
-      // userRegistrationResponse.getId();
+        // userRegistrationResponse.getId();
     }
 
     @Test
