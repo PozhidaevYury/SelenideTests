@@ -15,7 +15,7 @@ public class TestLogin extends BaseUITest {
         // create api tests
 
         MainPage.open()
-                .loginAs("hello", "12345");
+                .loginAs("hello", "test123");
 
         LoggedUserPage loggedUserPage = at(LoggedUserPage.class);
 

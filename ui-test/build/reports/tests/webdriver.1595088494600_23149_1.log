@@ -1,7 +1,0 @@
-1595088494926	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/vm/ghzvtrwd0mx7lc5j01mg63z00000gn/T/rust_mozprofilecCyeMx"
-1595088496829	Marionette	INFO	Listening on port 53977
-1595088496872	Marionette	WARN	TLS certificate errors will be ignored for this session
-JavaScript error: resource://gre/modules/URIFixup.jsm, line 281: NS_ERROR_FAILURE: Should pass a non-null uri
-JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
-JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
-1595088506701	Marionette	INFO	Stopped listening on port 53977

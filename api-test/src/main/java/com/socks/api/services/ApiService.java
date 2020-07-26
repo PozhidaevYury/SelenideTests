@@ -1,6 +1,7 @@
 package com.socks.api.services;
 
 import com.socks.api.ApiConfig;
+import io.qameta.allure.restassured.AllureRestAssured;
 import io.restassured.RestAssured;
 import io.restassured.filter.Filter;
 import io.restassured.filter.log.RequestLoggingFilter;
@@ -25,9 +26,9 @@ public class ApiService {
     private List<Filter> getFilters() {
         ApiConfig config = ConfigFactory.create(ApiConfig.class, System.getProperties());
         if (config.logging()) {
-            return Arrays.asList(new RequestLoggingFilter(), new ResponseLoggingFilter());
+            return Arrays.asList(new RequestLoggingFilter(), new ResponseLoggingFilter(), new AllureRestAssured());
         } else {
-            return Collections.emptyList();
+            return Collections.singletonList(new AllureRestAssured());
         }
     }
 }

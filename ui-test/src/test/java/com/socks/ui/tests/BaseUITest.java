@@ -1,6 +1,5 @@
 package com.socks.ui.tests;
 
-import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 import org.testng.annotations.BeforeSuite;
 
@@ -13,7 +12,7 @@ public class BaseUITest {
     public void setUp() {
         baseUrl = "http://46.101.203.68";
         browser = "com.socks.ui.SelenoidDriverProvider";
-        //browser = "chrome";
+       // browser = "firefox";
     }
 
     protected <T> T at(Class<T> pageClass) {

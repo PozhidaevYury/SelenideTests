@@ -51,7 +51,8 @@ public class UsersTest {
     public void testCantRegisterSameUserTwice() {
         User user = new User()
                 .username(faker.name().username())
-                .email("test@gmail.com");
+                .email("test@gmail.com")
+                .password("test123");
 
         userApiService.registerUser(user)
                 .shouldHave(statusCode(200))

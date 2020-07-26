@@ -1,1 +1,0 @@
-{"uuid":"47f0c3fb-88bf-4496-b72a-3b53fda3453d","name":"Gradle suite","children":["63c7e12b-d4f7-429d-b5be-aff414c3330f"],"befores":[{"name":"setUp","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1595003060911,"stop":1595003060915}],"afters":[],"links":[],"start":1595003060896,"stop":1595003061167}

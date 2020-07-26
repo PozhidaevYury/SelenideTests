@@ -1,6 +1,5 @@
 plugins {
     id 'java'
-    id "io.qameta.allure" version "2.8.1"
 }
 
 repositories {
@@ -14,15 +13,6 @@ test {
 dependencies {
     testCompile group: 'org.testng', name: 'testng', version: '7.1.0'
     compile group: 'com.codeborne', name: 'selenide', version: '5.13.0'
-    compile group: 'io.qameta.allure', name: 'allure-maven', version: '2.9'
 }
 
-allure {
-    autoconfigure = true
-    aspectjweaver = true
-    version = '2.4.1'
 
-    useTestNG {
-        version = '2.13.5'
-    }
-}
