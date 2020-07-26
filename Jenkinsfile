@@ -15,7 +15,7 @@ node {
     }
 
     allure([
-        includeProperties false,
+        includeProperties: false,
         jdk: "",
         properties: [],
         reportBuildPolicy: "ALWAYS",
