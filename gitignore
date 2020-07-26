@@ -1,5 +1,5 @@
 .gradle/
 .allure/
 .idea/
-build
+build/
 allure-results

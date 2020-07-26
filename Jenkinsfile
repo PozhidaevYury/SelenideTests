@@ -2,19 +2,15 @@ node {
 
     stage("checkout repo") {
     git branch: "master",
-    credentialsId: "",
+    credentialsId: "10fa4ef4-3e2c-42af-875a-3d5e222f89ee",
     url: "https://github.com/PozhidaevYury/SelenideTests.git"
     }
 
-    stage("run ui tests") {
-        sh "./gradlew ui :test -Dlogging=${LOGGING}"
+    stage("build") {
+        sh "./gradlew clean api-test:assemble"
     }
 
-    allure([
-    includeProperties false,
-    jdk: "",
-    properties: [],
-    reportBuildPolicy: "ALWAYS",
-    results: [[path: 'ui-test/build/allure-results']]
-    ])
+    stage("run api tests") {
+        sh "./gradlew api-test:test"
+    }
 }
