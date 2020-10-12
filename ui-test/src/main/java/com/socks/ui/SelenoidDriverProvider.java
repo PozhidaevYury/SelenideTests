@@ -25,7 +25,8 @@ public class SelenoidDriverProvider implements WebDriverProvider {
         try {
             RemoteWebDriver driver = new RemoteWebDriver(
                     URI.create("http://localhost:4444/wd/hub").toURL(),
-                    browser);
+                    browser
+            );
 
             driver.manage().window().setSize(new Dimension(1280, 1024));
             driver.setFileDetector(new LocalFileDetector());

@@ -12,8 +12,8 @@ public class AssertableResponse {
     private final Response response;
     private static final org.slf4j.Logger log = org.slf4j.LoggerFactory.getLogger(AssertableResponse.class);
 
-    public AssertableResponse(Response register) {
-        this.response = register;
+    public AssertableResponse(Response response) {
+        this.response = response;
     }
 
     @Step("Api response should have {0}")

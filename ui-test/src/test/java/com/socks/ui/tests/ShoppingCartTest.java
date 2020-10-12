@@ -17,7 +17,6 @@ public class ShoppingCartTest extends BaseUITest {
                 .addItemByIndex(0)
                 .goToCart();
 
-        // change
         at(ShoppingCartPage.class).totalAmount().shouldHave(text("$104.98"));
     }
 

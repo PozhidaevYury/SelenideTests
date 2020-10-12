@@ -13,6 +13,30 @@ public class User {
     @SerializedName("username")
     private String username;
 
+    @SerializedName("firstName")
+    private String firstName;
+
+    @SerializedName("lastName")
+    private String lastName;
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public User lastName(String lastName) {
+        this.lastName = lastName;
+        return this;
+    }
+
+    public User firstName(String firstName) {
+        this.firstName = firstName;
+        return this;
+    }
+
     public User password(String password) {
         this.password = password;
         return this;
