@@ -25,9 +25,8 @@ public class ApiService {
                 .filters(getFilters());
     }
 
-    protected void setupTextPlainRequest() {
+    public void setupTextPlainRequest() {
         RestAssured.registerParser("text/plain", Parser.JSON);
-        given().filters(getFilters());
     }
 
     private List<Filter> getFilters() {

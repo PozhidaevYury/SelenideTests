@@ -4,14 +4,14 @@ import com.google.gson.annotations.SerializedName;
 
 public class Addresses {
 
+    @SerializedName("street")
+    private String street;
     @SerializedName("number")
     private String number;
     @SerializedName("country")
     private String country;
     @SerializedName("city")
     private String city;
-    @SerializedName("street")
-    private String street;
     @SerializedName("postcode")
     private String postcode;
     @SerializedName("userID")

@@ -1,35 +1,19 @@
 package com.socks.tests;
 
-import com.github.javafaker.Faker;
-import com.socks.api.ProjectConfig;
 import com.socks.api.model.Addresses;
 import com.socks.api.model.Card;
 import com.socks.api.model.User;
 import com.socks.api.services.UserApiService;
-import io.restassured.RestAssured;
-import org.aeonbits.owner.ConfigFactory;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
-
-import java.util.Locale;
 
 import static com.socks.api.conditions.Conditions.*;
 import static org.hamcrest.Matchers.*;
 
 
-public class UsersTest {
+public class UsersTest extends BaseTest {
 
     private final UserApiService userApiService = new UserApiService();
-    private Faker faker;
-
-    @BeforeClass
-    public void setUp() {
-        ProjectConfig config = ConfigFactory.create(ProjectConfig.class, System.getProperties());
-        faker = new Faker(new Locale(config.locale()));
-        RestAssured.baseURI = config.baseUrl();
-        RestAssured.port = 80;
-    }
 
     @Test
     public void testCanRegisterNewUser() {
@@ -96,10 +80,10 @@ public class UsersTest {
     @Test
     public void testCreateNewCard() {
         Card card = new Card()
-                .setLongNum("1234567890")
+                .setLongNum(faker.number().toString())
                 .setExpires("11/21")
                 .setCcv("666")
-                .setUserID("5f842de5ee11cb000154af21");
+                .setUserID("57a98d98e4b00679b4a830af");
 
         userApiService.createNewCard(card)
                 .shouldHave(statusCode(200))
@@ -109,15 +93,15 @@ public class UsersTest {
     @Test
     public void testCreateNewAddress() {
         Addresses addresses = new Addresses()
-                .setStreet("test")
-                .setNumber("test")
-                .setCountry("test")
-                .setCity("test")
-                .setPostcode("test")
-                .setUserID("5f842de5ee11cb000154af21");
+                .setStreet(faker.address().streetAddress())
+                .setNumber(faker.number().digit())
+                .setCountry(faker.country().name())
+                .setCity(faker.country().capital())
+                .setPostcode(faker.code().asin())
+                .setUserID("5f8c1e75ee11cb00011b1d6b");
 
         userApiService.createNewAddresses(addresses)
                 .shouldHave(statusCode(200))
-                .shouldHave(body("id", not(emptyString())));
+                .shouldHave(body("id", emptyString()));
     }
 }
