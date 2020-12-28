@@ -23,13 +23,13 @@
 <tr>
 <td>
 <div class="infoBox" id="tests">
-<div class="counter">1</div>
+<div class="counter">6</div>
 <p>tests</p>
 </div>
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">1</div>
+<div class="counter">2</div>
 <p>failures</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">1.829s</div>
+<div class="counter">1.287s</div>
 <p>duration</p>
 </div>
 </td>
@@ -51,7 +51,7 @@
 </td>
 <td>
 <div class="infoBox failures" id="successRate">
-<div class="percent">0%</div>
+<div class="percent">66%</div>
 <p>successful</p>
 </div>
 </td>
@@ -73,14 +73,13 @@
 <div id="tab0" class="tab">
 <h2>Failed tests</h2>
 <div class="test">
-<a name="testCreateNewCard"></a>
-<h3 class="failures">testCreateNewCard</h3>
+<a name="testCreateNewAddress"></a>
+<h3 class="failures">testCreateNewAddress</h3>
 <span class="code">
-<pre>java.lang.IllegalStateException: Expected response body to be verified as JSON, HTML or XML but content-type 'text/plain' is not supported out of the box.
-Try registering a custom parser using:
-   RestAssured.registerParser(&quot;text/plain&quot;, &lt;parser type&gt;);
-Content was:
-{&quot;error&quot;:&quot;Do: Invalid Id Hex&quot;,&quot;status_code&quot;:500,&quot;status_text&quot;:&quot;Internal Server Error&quot;}
+<pre>java.lang.AssertionError: 1 expectation failed.
+JSON path id doesn't match.
+Expected: an empty string
+  Actual: null
 
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
@@ -92,42 +91,7 @@ Content was:
 	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:59)
 	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:237)
 	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:249)
-	at io.restassured.assertion.StreamVerifier.newAssertion(StreamVerifier.groovy:49)
-	at io.restassured.assertion.StreamVerifier$newAssertion.call(Unknown Source)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:115)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:143)
-	at io.restassured.assertion.BodyMatcher.validate(BodyMatcher.groovy:85)
-	at io.restassured.assertion.BodyMatcher$validate$0.call(Unknown Source)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:115)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:143)
-	at io.restassured.assertion.BodyMatcherGroup$_validate_closure2.doCall(BodyMatcherGroup.groovy:47)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:101)
-	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
-	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:263)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1041)
-	at groovy.lang.Closure.call(Closure.java:405)
-	at groovy.lang.Closure.call(Closure.java:421)
-	at org.codehaus.groovy.runtime.DefaultGroovyMethods.collect(DefaultGroovyMethods.java:3574)
-	at org.codehaus.groovy.runtime.DefaultGroovyMethods.collect(DefaultGroovyMethods.java:3559)
-	at org.codehaus.groovy.runtime.DefaultGroovyMethods.collect(DefaultGroovyMethods.java:3659)
-	at org.codehaus.groovy.runtime.dgm$87.invoke(Unknown Source)
-	at org.codehaus.groovy.runtime.callsite.PojoMetaMethodSite$PojoMetaMethodSiteNoUnwrapNoCoerce.invoke(PojoMetaMethodSite.java:244)
-	at org.codehaus.groovy.runtime.callsite.PojoMetaMethodSite.call(PojoMetaMethodSite.java:53)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:115)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:127)
-	at io.restassured.assertion.BodyMatcherGroup.validate(BodyMatcherGroup.groovy:47)
-	at io.restassured.assertion.BodyMatcherGroup$validate$3.call(Unknown Source)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:115)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:143)
-	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:480)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:493)
 	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
 	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -137,14 +101,11 @@ Content was:
 	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:190)
 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:58)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:51)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:156)
 	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:168)
 	at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:261)
 	at io.restassured.specification.ResponseSpecification$body$1.callCurrent(Unknown Source)
 	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:51)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:156)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:192)
+	at io.restassured.specification.ResponseSpecification$body$1.callCurrent(Unknown Source)
 	at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:108)
 	at io.restassured.internal.ValidatableResponseOptionsImpl.body(ValidatableResponseOptionsImpl.java:244)
 	at io.restassured.internal.ValidatableResponseImpl.super$2$body(ValidatableResponseImpl.groovy)
@@ -160,7 +121,107 @@ Content was:
 	at io.restassured.internal.ValidatableResponseImpl.body(ValidatableResponseImpl.groovy)
 	at com.socks.api.conditions.BodyFieldCondition.check(BodyFieldCondition.java:18)
 	at com.socks.api.assertions.AssertableResponse.shouldHave(AssertableResponse.java:22)
-	at com.socks.tests.UsersTest.testCreateNewCard(UsersTest.java:105)
+	at com.socks.tests.UsersTest.testCreateNewAddress(UsersTest.java:105)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+	at org.testng.TestRunner.privateRun(TestRunner.java:766)
+	at org.testng.TestRunner.run(TestRunner.java:587)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+	at org.testng.TestNG.runSuites(TestNG.java:1039)
+	at org.testng.TestNG.run(TestNG.java:1007)
+	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.runTests(TestNGTestClassProcessor.java:141)
+	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.stop(TestNGTestClassProcessor.java:90)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at com.sun.proxy.$Proxy2.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.stop(TestWorker.java:132)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:182)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:164)
+	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:412)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:48)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:56)
+	at java.lang.Thread.run(Thread.java:748)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="testCreateNewCard"></a>
+<h3 class="failures">testCreateNewCard</h3>
+<span class="code">
+<pre>java.lang.AssertionError: 1 expectation failed.
+Expected status code &lt;200&gt; but was &lt;500&gt;.
+
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:80)
+	at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:74)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:249)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:493)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:190)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:58)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:168)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:126)
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:134)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at io.restassured.internal.ValidatableResponseImpl.super$2$statusCode(ValidatableResponseImpl.groovy)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:101)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1217)
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)
+	at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy:142)
+	at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy)
+	at com.socks.api.conditions.StatusCodeCondition.check(StatusCodeCondition.java:15)
+	at com.socks.api.assertions.AssertableResponse.shouldHave(AssertableResponse.java:22)
+	at com.socks.tests.UsersTest.testCreateNewCard(UsersTest.java:89)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -229,9 +290,34 @@ Content was:
 </tr>
 </thead>
 <tr>
-<td class="failures">testCreateNewCard</td>
-<td class="failures">1.829s</td>
+<td class="success">testCanRegisterNewUser</td>
+<td class="success">0.645s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testCannotRegisterSameUserTwice</td>
+<td class="success">0.163s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="failures">testCreateNewAddress</td>
+<td class="failures">0.094s</td>
 <td class="failures">failed</td>
+</tr>
+<tr>
+<td class="failures">testCreateNewCard</td>
+<td class="failures">0.047s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="success">testReturnAllCards</td>
+<td class="success">0.137s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testReturnAllCustomers</td>
+<td class="success">0.201s</td>
+<td class="success">passed</td>
 </tr>
 </table>
 </div>
@@ -239,7 +325,7 @@ Content was:
 <h2>Standard output</h2>
 <span class="code">
 <pre>Request method:	POST
-Request URI:	http://localhost:80/cards
+Request URI:	http://localhost:80/register
 Proxy:			&lt;none&gt;
 Request params:	&lt;none&gt;
 Query params:	&lt;none&gt;
@@ -251,22 +337,943 @@ Cookies:		&lt;none&gt;
 Multiparts:		&lt;none&gt;
 Body:
 {
-    &quot;longNum&quot;: &quot;1234567890&quot;,
-    &quot;expires&quot;: &quot;11/21&quot;,
-    &quot;ccv&quot;: &quot;666&quot;,
-    &quot;userID&quot;: &quot;5f842de5ee11cb000154af21&quot;
+    &quot;password&quot;: &quot;test123&quot;,
+    &quot;email&quot;: &quot;test@gmail.com&quot;,
+    &quot;username&quot;: &quot;rosetta.hintz&quot;,
+    &quot;firstName&quot;: &quot;Shane&quot;,
+    &quot;lastName&quot;: &quot;Bayer&quot;
 }
 HTTP/1.1 200 OK
-Date: Mon, 12 Oct 2020 10:56:47 GMT
+Content-Length: 33
+Content-Type: application/json; charset=utf-8
+Date: Mon, 28 Dec 2020 19:28:28 GMT
+Etag: W/&quot;21-bJW4nilPaq+9ZGth3VxNwxa54Ik&quot;
 Set-Cookie: _TRAEFIK_BACKEND=http://front-end:8079
-Set-Cookie: md.sid=s%3AcqFq7Ez2QrmWrrLsI0ykl5TVtwcABYNf.ZxYfeirZreZ2LXd1ogaw7MDHqXUpiBTcTJXQEypkGAY; Path=/; HttpOnly
+Set-Cookie: logged_in=X3u9UFl-9D0STvfPIISD0q4vOlqLe5uU; Max-Age=3600; Path=/; Expires=Mon, 28 Dec 2020 20:28:28 GMT
+Set-Cookie: md.sid=s%3AX3u9UFl-9D0STvfPIISD0q4vOlqLe5uU.o1R5H3sG%2BA04NcVOq5vbNINq6ZGkAzJsS%2FPG7WIAhrQ; Path=/; HttpOnly
 X-Powered-By: Express
-Content-Length: 86
-Content-Type: text/plain; charset=utf-8
 
-{&quot;error&quot;:&quot;Do: Invalid Id Hex&quot;,&quot;status_code&quot;:500,&quot;status_text&quot;:&quot;Internal Server Error&quot;}
-17:56:47.522 [Test worker] INFO com.socks.api.assertions.AssertableResponse - About to check condition status code is 200
-17:56:47.559 [Test worker] INFO com.socks.api.assertions.AssertableResponse - About to check condition body field [id] not an empty string
+{
+    &quot;id&quot;: &quot;5fea31dcee11cb000148ea20&quot;
+}
+02:28:28.664 [Test worker] INFO com.socks.api.assertions.AssertableResponse - About to check condition status code is 200
+02:28:28.664 [Test worker] INFO com.socks.api.assertions.AssertableResponse - About to check condition body field [id] not an empty string
+Request method:	POST
+Request URI:	http://localhost:80/register
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	&lt;none&gt;
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Body:
+{
+    &quot;password&quot;: &quot;test123&quot;,
+    &quot;email&quot;: &quot;test@gmail.com&quot;,
+    &quot;username&quot;: &quot;antony.boyer&quot;,
+    &quot;firstName&quot;: &quot;Kasie&quot;,
+    &quot;lastName&quot;: &quot;Emard&quot;
+}
+HTTP/1.1 200 OK
+Content-Length: 33
+Content-Type: application/json; charset=utf-8
+Date: Mon, 28 Dec 2020 19:28:28 GMT
+Etag: W/&quot;21-1HqUzGDneC9JKieAlTWhaim0svE&quot;
+Set-Cookie: _TRAEFIK_BACKEND=http://front-end:8079
+Set-Cookie: logged_in=YSnyd9hj2jy29HsdKg0FIKsQ8SxYTObw; Max-Age=3600; Path=/; Expires=Mon, 28 Dec 2020 20:28:28 GMT
+Set-Cookie: md.sid=s%3AYSnyd9hj2jy29HsdKg0FIKsQ8SxYTObw.SjqNk6yxhg5CiuzSpTM%2FhKMdmu6F1oH33qSSUpszDsE; Path=/; HttpOnly
+X-Powered-By: Express
+
+{
+    &quot;id&quot;: &quot;5fea31dcee11cb000148ea21&quot;
+}
+02:28:28.778 [Test worker] INFO com.socks.api.assertions.AssertableResponse - About to check condition status code is 200
+02:28:28.779 [Test worker] INFO com.socks.api.assertions.AssertableResponse - About to check condition body field [id] not an empty string
+Request method:	POST
+Request URI:	http://localhost:80/register
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	&lt;none&gt;
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Body:
+{
+    &quot;password&quot;: &quot;test123&quot;,
+    &quot;email&quot;: &quot;test@gmail.com&quot;,
+    &quot;username&quot;: &quot;antony.boyer&quot;,
+    &quot;firstName&quot;: &quot;Kasie&quot;,
+    &quot;lastName&quot;: &quot;Emard&quot;
+}
+HTTP/1.1 500 Internal Server Error
+Content-Length: 0
+Date: Mon, 28 Dec 2020 19:28:28 GMT
+Set-Cookie: _TRAEFIK_BACKEND=http://front-end:8079
+Set-Cookie: md.sid=s%3AzkoGB2QPoyAB154PDfWrtM9XBqvDCT_9.DKO0Ca1G%2FATGTje6dyY2XYOJEAVq4s1Z%2BNJBSWEGBFk; Path=/; HttpOnly
+X-Powered-By: Express
+Content-Type: text/plain; charset=utf-8
+02:28:28.840 [Test worker] INFO com.socks.api.assertions.AssertableResponse - About to check condition status code is 500
+02:28:28.904 [Test worker] INFO com.socks.api.assertions.AssertableResponse - About to check condition status code is 200
+02:28:28.905 [Test worker] INFO com.socks.api.assertions.AssertableResponse - About to check condition body field [id] an empty string
+02:28:28.982 [Test worker] INFO com.socks.api.assertions.AssertableResponse - About to check condition status code is 200
+{
+    &quot;_embedded&quot;: {
+        &quot;card&quot;: [
+            {
+                &quot;longNum&quot;: &quot;5953580604169678&quot;,
+                &quot;expires&quot;: &quot;08/19&quot;,
+                &quot;ccv&quot;: &quot;678&quot;,
+                &quot;id&quot;: &quot;57a98d98e4b00679b4a830ae&quot;,
+                &quot;_links&quot;: {
+                    &quot;card&quot;: {
+                        &quot;href&quot;: &quot;http://user/cards/57a98d98e4b00679b4a830ae&quot;
+                    },
+                    &quot;self&quot;: {
+                        &quot;href&quot;: &quot;http://user/cards/57a98d98e4b00679b4a830ae&quot;
+                    }
+                }
+            },
+            {
+                &quot;longNum&quot;: &quot;5544154011345918&quot;,
+                &quot;expires&quot;: &quot;08/19&quot;,
+                &quot;ccv&quot;: &quot;958&quot;,
+                &quot;id&quot;: &quot;57a98d98e4b00679b4a830b1&quot;,
+                &quot;_links&quot;: {
+                    &quot;card&quot;: {
+                        &quot;href&quot;: &quot;http://user/cards/57a98d98e4b00679b4a830b1&quot;
+                    },
+                    &quot;self&quot;: {
+                        &quot;href&quot;: &quot;http://user/cards/57a98d98e4b00679b4a830b1&quot;
+                    }
+                }
+            },
+            {
+                &quot;longNum&quot;: &quot;0908415193175205&quot;,
+                &quot;expires&quot;: &quot;08/19&quot;,
+                &quot;ccv&quot;: &quot;280&quot;,
+                &quot;id&quot;: &quot;57a98d98e4b00679b4a830b4&quot;,
+                &quot;_links&quot;: {
+                    &quot;card&quot;: {
+                        &quot;href&quot;: &quot;http://user/cards/57a98d98e4b00679b4a830b4&quot;
+                    },
+                    &quot;self&quot;: {
+                        &quot;href&quot;: &quot;http://user/cards/57a98d98e4b00679b4a830b4&quot;
+                    }
+                }
+            },
+            {
+                &quot;longNum&quot;: &quot;5429804235432&quot;,
+                &quot;expires&quot;: &quot;04/16&quot;,
+                &quot;ccv&quot;: &quot;432&quot;,
+                &quot;id&quot;: &quot;57a98ddce4b00679b4a830d2&quot;,
+                &quot;_links&quot;: {
+                    &quot;card&quot;: {
+                        &quot;href&quot;: &quot;http://user/cards/57a98ddce4b00679b4a830d2&quot;
+                    },
+                    &quot;self&quot;: {
+                        &quot;href&quot;: &quot;http://user/cards/57a98ddce4b00679b4a830d2&quot;
+                    }
+                }
+            }
+        ]
+    }
+}
+02:28:29.116 [Test worker] INFO com.socks.api.assertions.AssertableResponse - About to check condition status code is 200
+02:28:29.116 [Test worker] INFO com.socks.api.assertions.AssertableResponse - About to check condition body field [_embedded.card] not an empty collection
+{
+    &quot;_embedded&quot;: {
+        &quot;customer&quot;: [
+            {
+                &quot;firstName&quot;: &quot;Eve&quot;,
+                &quot;lastName&quot;: &quot;Berger&quot;,
+                &quot;username&quot;: &quot;Eve_Berger&quot;,
+                &quot;id&quot;: &quot;57a98d98e4b00679b4a830af&quot;,
+                &quot;_links&quot;: {
+                    &quot;addresses&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/57a98d98e4b00679b4a830af/addresses&quot;
+                    },
+                    &quot;cards&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/57a98d98e4b00679b4a830af/cards&quot;
+                    },
+                    &quot;customer&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/57a98d98e4b00679b4a830af&quot;
+                    },
+                    &quot;self&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/57a98d98e4b00679b4a830af&quot;
+                    }
+                }
+            },
+            {
+                &quot;firstName&quot;: &quot;User&quot;,
+                &quot;lastName&quot;: &quot;Name&quot;,
+                &quot;username&quot;: &quot;user&quot;,
+                &quot;id&quot;: &quot;57a98d98e4b00679b4a830b2&quot;,
+                &quot;_links&quot;: {
+                    &quot;addresses&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/57a98d98e4b00679b4a830b2/addresses&quot;
+                    },
+                    &quot;cards&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/57a98d98e4b00679b4a830b2/cards&quot;
+                    },
+                    &quot;customer&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/57a98d98e4b00679b4a830b2&quot;
+                    },
+                    &quot;self&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/57a98d98e4b00679b4a830b2&quot;
+                    }
+                }
+            },
+            {
+                &quot;firstName&quot;: &quot;User1&quot;,
+                &quot;lastName&quot;: &quot;Name1&quot;,
+                &quot;username&quot;: &quot;user1&quot;,
+                &quot;id&quot;: &quot;57a98d98e4b00679b4a830b5&quot;,
+                &quot;_links&quot;: {
+                    &quot;addresses&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/57a98d98e4b00679b4a830b5/addresses&quot;
+                    },
+                    &quot;cards&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/57a98d98e4b00679b4a830b5/cards&quot;
+                    },
+                    &quot;customer&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/57a98d98e4b00679b4a830b5&quot;
+                    },
+                    &quot;self&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/57a98d98e4b00679b4a830b5&quot;
+                    }
+                }
+            },
+            {
+                &quot;firstName&quot;: &quot;Emerson&quot;,
+                &quot;lastName&quot;: &quot;Baumbach&quot;,
+                &quot;username&quot;: &quot;aubrey.bogan&quot;,
+                &quot;id&quot;: &quot;5fea0fc1ee11cb000148e9ed&quot;,
+                &quot;_links&quot;: {
+                    &quot;addresses&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea0fc1ee11cb000148e9ed/addresses&quot;
+                    },
+                    &quot;cards&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea0fc1ee11cb000148e9ed/cards&quot;
+                    },
+                    &quot;customer&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea0fc1ee11cb000148e9ed&quot;
+                    },
+                    &quot;self&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea0fc1ee11cb000148e9ed&quot;
+                    }
+                }
+            },
+            {
+                &quot;firstName&quot;: &quot;Mary&quot;,
+                &quot;lastName&quot;: &quot;Roob&quot;,
+                &quot;username&quot;: &quot;lucio.bradtke&quot;,
+                &quot;id&quot;: &quot;5fea0fc1ee11cb000148e9ee&quot;,
+                &quot;_links&quot;: {
+                    &quot;addresses&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea0fc1ee11cb000148e9ee/addresses&quot;
+                    },
+                    &quot;cards&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea0fc1ee11cb000148e9ee/cards&quot;
+                    },
+                    &quot;customer&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea0fc1ee11cb000148e9ee&quot;
+                    },
+                    &quot;self&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea0fc1ee11cb000148e9ee&quot;
+                    }
+                }
+            },
+            {
+                &quot;firstName&quot;: &quot;Marni&quot;,
+                &quot;lastName&quot;: &quot;Hilpert&quot;,
+                &quot;username&quot;: &quot;dorathy.medhurst&quot;,
+                &quot;id&quot;: &quot;5fea10e4ee11cb000148e9f0&quot;,
+                &quot;_links&quot;: {
+                    &quot;addresses&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea10e4ee11cb000148e9f0/addresses&quot;
+                    },
+                    &quot;cards&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea10e4ee11cb000148e9f0/cards&quot;
+                    },
+                    &quot;customer&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea10e4ee11cb000148e9f0&quot;
+                    },
+                    &quot;self&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea10e4ee11cb000148e9f0&quot;
+                    }
+                }
+            },
+            {
+                &quot;firstName&quot;: &quot;Eugena&quot;,
+                &quot;lastName&quot;: &quot;Nikolaus&quot;,
+                &quot;username&quot;: &quot;ta.bins&quot;,
+                &quot;id&quot;: &quot;5fea10e5ee11cb000148e9f1&quot;,
+                &quot;_links&quot;: {
+                    &quot;addresses&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea10e5ee11cb000148e9f1/addresses&quot;
+                    },
+                    &quot;cards&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea10e5ee11cb000148e9f1/cards&quot;
+                    },
+                    &quot;customer&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea10e5ee11cb000148e9f1&quot;
+                    },
+                    &quot;self&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea10e5ee11cb000148e9f1&quot;
+                    }
+                }
+            },
+            {
+                &quot;firstName&quot;: &quot;Ronald&quot;,
+                &quot;lastName&quot;: &quot;Abbott&quot;,
+                &quot;username&quot;: &quot;damien.tremblay&quot;,
+                &quot;id&quot;: &quot;5fea11e1ee11cb000148e9f3&quot;,
+                &quot;_links&quot;: {
+                    &quot;addresses&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea11e1ee11cb000148e9f3/addresses&quot;
+                    },
+                    &quot;cards&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea11e1ee11cb000148e9f3/cards&quot;
+                    },
+                    &quot;customer&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea11e1ee11cb000148e9f3&quot;
+                    },
+                    &quot;self&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea11e1ee11cb000148e9f3&quot;
+                    }
+                }
+            },
+            {
+                &quot;firstName&quot;: &quot;Arnetta&quot;,
+                &quot;lastName&quot;: &quot;Schuppe&quot;,
+                &quot;username&quot;: &quot;gerry.wiza&quot;,
+                &quot;id&quot;: &quot;5fea11e1ee11cb000148e9f4&quot;,
+                &quot;_links&quot;: {
+                    &quot;addresses&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea11e1ee11cb000148e9f4/addresses&quot;
+                    },
+                    &quot;cards&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea11e1ee11cb000148e9f4/cards&quot;
+                    },
+                    &quot;customer&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea11e1ee11cb000148e9f4&quot;
+                    },
+                    &quot;self&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea11e1ee11cb000148e9f4&quot;
+                    }
+                }
+            },
+            {
+                &quot;firstName&quot;: &quot;Launa&quot;,
+                &quot;lastName&quot;: &quot;Wilderman&quot;,
+                &quot;username&quot;: &quot;mickey.haag&quot;,
+                &quot;id&quot;: &quot;5fea133bee11cb000148e9f6&quot;,
+                &quot;_links&quot;: {
+                    &quot;addresses&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea133bee11cb000148e9f6/addresses&quot;
+                    },
+                    &quot;cards&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea133bee11cb000148e9f6/cards&quot;
+                    },
+                    &quot;customer&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea133bee11cb000148e9f6&quot;
+                    },
+                    &quot;self&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea133bee11cb000148e9f6&quot;
+                    }
+                }
+            },
+            {
+                &quot;firstName&quot;: &quot;Illa&quot;,
+                &quot;lastName&quot;: &quot;Upton&quot;,
+                &quot;username&quot;: &quot;warren.wyman&quot;,
+                &quot;id&quot;: &quot;5fea133bee11cb000148e9f7&quot;,
+                &quot;_links&quot;: {
+                    &quot;addresses&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea133bee11cb000148e9f7/addresses&quot;
+                    },
+                    &quot;cards&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea133bee11cb000148e9f7/cards&quot;
+                    },
+                    &quot;customer&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea133bee11cb000148e9f7&quot;
+                    },
+                    &quot;self&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea133bee11cb000148e9f7&quot;
+                    }
+                }
+            },
+            {
+                &quot;firstName&quot;: &quot;Rosalee&quot;,
+                &quot;lastName&quot;: &quot;Bernhard&quot;,
+                &quot;username&quot;: &quot;ernie.mraz&quot;,
+                &quot;id&quot;: &quot;5fea1488ee11cb000148e9f9&quot;,
+                &quot;_links&quot;: {
+                    &quot;addresses&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea1488ee11cb000148e9f9/addresses&quot;
+                    },
+                    &quot;cards&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea1488ee11cb000148e9f9/cards&quot;
+                    },
+                    &quot;customer&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea1488ee11cb000148e9f9&quot;
+                    },
+                    &quot;self&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea1488ee11cb000148e9f9&quot;
+                    }
+                }
+            },
+            {
+                &quot;firstName&quot;: &quot;Tora&quot;,
+                &quot;lastName&quot;: &quot;Altenwerth&quot;,
+                &quot;username&quot;: &quot;jacqulyn.heidenreich&quot;,
+                &quot;id&quot;: &quot;5fea1488ee11cb000148e9fa&quot;,
+                &quot;_links&quot;: {
+                    &quot;addresses&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea1488ee11cb000148e9fa/addresses&quot;
+                    },
+                    &quot;cards&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea1488ee11cb000148e9fa/cards&quot;
+                    },
+                    &quot;customer&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea1488ee11cb000148e9fa&quot;
+                    },
+                    &quot;self&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea1488ee11cb000148e9fa&quot;
+                    }
+                }
+            },
+            {
+                &quot;firstName&quot;: &quot;Agustina&quot;,
+                &quot;lastName&quot;: &quot;Mitchell&quot;,
+                &quot;username&quot;: &quot;tracie.hauck&quot;,
+                &quot;id&quot;: &quot;5fea20f4ee11cb000148e9fc&quot;,
+                &quot;_links&quot;: {
+                    &quot;addresses&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea20f4ee11cb000148e9fc/addresses&quot;
+                    },
+                    &quot;cards&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea20f4ee11cb000148e9fc/cards&quot;
+                    },
+                    &quot;customer&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea20f4ee11cb000148e9fc&quot;
+                    },
+                    &quot;self&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea20f4ee11cb000148e9fc&quot;
+                    }
+                }
+            },
+            {
+                &quot;firstName&quot;: &quot;Kirby&quot;,
+                &quot;lastName&quot;: &quot;Jacobs&quot;,
+                &quot;username&quot;: &quot;katheleen.baumbach&quot;,
+                &quot;id&quot;: &quot;5fea20f4ee11cb000148e9fd&quot;,
+                &quot;_links&quot;: {
+                    &quot;addresses&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea20f4ee11cb000148e9fd/addresses&quot;
+                    },
+                    &quot;cards&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea20f4ee11cb000148e9fd/cards&quot;
+                    },
+                    &quot;customer&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea20f4ee11cb000148e9fd&quot;
+                    },
+                    &quot;self&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea20f4ee11cb000148e9fd&quot;
+                    }
+                }
+            },
+            {
+                &quot;firstName&quot;: &quot;Marvel&quot;,
+                &quot;lastName&quot;: &quot;Bartell&quot;,
+                &quot;username&quot;: &quot;joellen.muller&quot;,
+                &quot;id&quot;: &quot;5fea2685ee11cb000148e9ff&quot;,
+                &quot;_links&quot;: {
+                    &quot;addresses&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea2685ee11cb000148e9ff/addresses&quot;
+                    },
+                    &quot;cards&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea2685ee11cb000148e9ff/cards&quot;
+                    },
+                    &quot;customer&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea2685ee11cb000148e9ff&quot;
+                    },
+                    &quot;self&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea2685ee11cb000148e9ff&quot;
+                    }
+                }
+            },
+            {
+                &quot;firstName&quot;: &quot;Penney&quot;,
+                &quot;lastName&quot;: &quot;Boyer&quot;,
+                &quot;username&quot;: &quot;joette.schowalter&quot;,
+                &quot;id&quot;: &quot;5fea2685ee11cb000148ea00&quot;,
+                &quot;_links&quot;: {
+                    &quot;addresses&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea2685ee11cb000148ea00/addresses&quot;
+                    },
+                    &quot;cards&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea2685ee11cb000148ea00/cards&quot;
+                    },
+                    &quot;customer&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea2685ee11cb000148ea00&quot;
+                    },
+                    &quot;self&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea2685ee11cb000148ea00&quot;
+                    }
+                }
+            },
+            {
+                &quot;firstName&quot;: &quot;Morton&quot;,
+                &quot;lastName&quot;: &quot;Fisher&quot;,
+                &quot;username&quot;: &quot;keiko.dooley&quot;,
+                &quot;id&quot;: &quot;5fea2823ee11cb000148ea02&quot;,
+                &quot;_links&quot;: {
+                    &quot;addresses&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea2823ee11cb000148ea02/addresses&quot;
+                    },
+                    &quot;cards&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea2823ee11cb000148ea02/cards&quot;
+                    },
+                    &quot;customer&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea2823ee11cb000148ea02&quot;
+                    },
+                    &quot;self&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea2823ee11cb000148ea02&quot;
+                    }
+                }
+            },
+            {
+                &quot;firstName&quot;: &quot;Marica&quot;,
+                &quot;lastName&quot;: &quot;Bins&quot;,
+                &quot;username&quot;: &quot;johnny.pfeffer&quot;,
+                &quot;id&quot;: &quot;5fea2823ee11cb000148ea03&quot;,
+                &quot;_links&quot;: {
+                    &quot;addresses&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea2823ee11cb000148ea03/addresses&quot;
+                    },
+                    &quot;cards&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea2823ee11cb000148ea03/cards&quot;
+                    },
+                    &quot;customer&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea2823ee11cb000148ea03&quot;
+                    },
+                    &quot;self&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea2823ee11cb000148ea03&quot;
+                    }
+                }
+            },
+            {
+                &quot;firstName&quot;: &quot;Jammie&quot;,
+                &quot;lastName&quot;: &quot;Ondricka&quot;,
+                &quot;username&quot;: &quot;josephina.stokes&quot;,
+                &quot;id&quot;: &quot;5fea28caee11cb000148ea05&quot;,
+                &quot;_links&quot;: {
+                    &quot;addresses&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea28caee11cb000148ea05/addresses&quot;
+                    },
+                    &quot;cards&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea28caee11cb000148ea05/cards&quot;
+                    },
+                    &quot;customer&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea28caee11cb000148ea05&quot;
+                    },
+                    &quot;self&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea28caee11cb000148ea05&quot;
+                    }
+                }
+            },
+            {
+                &quot;firstName&quot;: &quot;Robert&quot;,
+                &quot;lastName&quot;: &quot;Gerlach&quot;,
+                &quot;username&quot;: &quot;wilbur.schmitt&quot;,
+                &quot;id&quot;: &quot;5fea28caee11cb000148ea06&quot;,
+                &quot;_links&quot;: {
+                    &quot;addresses&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea28caee11cb000148ea06/addresses&quot;
+                    },
+                    &quot;cards&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea28caee11cb000148ea06/cards&quot;
+                    },
+                    &quot;customer&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea28caee11cb000148ea06&quot;
+                    },
+                    &quot;self&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea28caee11cb000148ea06&quot;
+                    }
+                }
+            },
+            {
+                &quot;firstName&quot;: &quot;Darryl&quot;,
+                &quot;lastName&quot;: &quot;Heaney&quot;,
+                &quot;username&quot;: &quot;beryl.wilderman&quot;,
+                &quot;id&quot;: &quot;5fea2924ee11cb000148ea08&quot;,
+                &quot;_links&quot;: {
+                    &quot;addresses&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea2924ee11cb000148ea08/addresses&quot;
+                    },
+                    &quot;cards&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea2924ee11cb000148ea08/cards&quot;
+                    },
+                    &quot;customer&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea2924ee11cb000148ea08&quot;
+                    },
+                    &quot;self&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea2924ee11cb000148ea08&quot;
+                    }
+                }
+            },
+            {
+                &quot;firstName&quot;: &quot;Allen&quot;,
+                &quot;lastName&quot;: &quot;Rath&quot;,
+                &quot;username&quot;: &quot;andreas.beer&quot;,
+                &quot;id&quot;: &quot;5fea2925ee11cb000148ea09&quot;,
+                &quot;_links&quot;: {
+                    &quot;addresses&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea2925ee11cb000148ea09/addresses&quot;
+                    },
+                    &quot;cards&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea2925ee11cb000148ea09/cards&quot;
+                    },
+                    &quot;customer&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea2925ee11cb000148ea09&quot;
+                    },
+                    &quot;self&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea2925ee11cb000148ea09&quot;
+                    }
+                }
+            },
+            {
+                &quot;firstName&quot;: &quot;Phuong&quot;,
+                &quot;lastName&quot;: &quot;Nienow&quot;,
+                &quot;username&quot;: &quot;margurite.hintz&quot;,
+                &quot;id&quot;: &quot;5fea294cee11cb000148ea0b&quot;,
+                &quot;_links&quot;: {
+                    &quot;addresses&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea294cee11cb000148ea0b/addresses&quot;
+                    },
+                    &quot;cards&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea294cee11cb000148ea0b/cards&quot;
+                    },
+                    &quot;customer&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea294cee11cb000148ea0b&quot;
+                    },
+                    &quot;self&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea294cee11cb000148ea0b&quot;
+                    }
+                }
+            },
+            {
+                &quot;firstName&quot;: &quot;Dave&quot;,
+                &quot;lastName&quot;: &quot;Witting&quot;,
+                &quot;username&quot;: &quot;sallie.bosco&quot;,
+                &quot;id&quot;: &quot;5fea294cee11cb000148ea0c&quot;,
+                &quot;_links&quot;: {
+                    &quot;addresses&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea294cee11cb000148ea0c/addresses&quot;
+                    },
+                    &quot;cards&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea294cee11cb000148ea0c/cards&quot;
+                    },
+                    &quot;customer&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea294cee11cb000148ea0c&quot;
+                    },
+                    &quot;self&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea294cee11cb000148ea0c&quot;
+                    }
+                }
+            },
+            {
+                &quot;firstName&quot;: &quot;Earnest&quot;,
+                &quot;lastName&quot;: &quot;Feil&quot;,
+                &quot;username&quot;: &quot;terence.bergnaum&quot;,
+                &quot;id&quot;: &quot;5fea2b5eee11cb000148ea0e&quot;,
+                &quot;_links&quot;: {
+                    &quot;addresses&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea2b5eee11cb000148ea0e/addresses&quot;
+                    },
+                    &quot;cards&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea2b5eee11cb000148ea0e/cards&quot;
+                    },
+                    &quot;customer&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea2b5eee11cb000148ea0e&quot;
+                    },
+                    &quot;self&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea2b5eee11cb000148ea0e&quot;
+                    }
+                }
+            },
+            {
+                &quot;firstName&quot;: &quot;Wei&quot;,
+                &quot;lastName&quot;: &quot;Wuckert&quot;,
+                &quot;username&quot;: &quot;desirae.murazik&quot;,
+                &quot;id&quot;: &quot;5fea2b5eee11cb000148ea0f&quot;,
+                &quot;_links&quot;: {
+                    &quot;addresses&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea2b5eee11cb000148ea0f/addresses&quot;
+                    },
+                    &quot;cards&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea2b5eee11cb000148ea0f/cards&quot;
+                    },
+                    &quot;customer&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea2b5eee11cb000148ea0f&quot;
+                    },
+                    &quot;self&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea2b5eee11cb000148ea0f&quot;
+                    }
+                }
+            },
+            {
+                &quot;firstName&quot;: &quot;Sandi&quot;,
+                &quot;lastName&quot;: &quot;Wolff&quot;,
+                &quot;username&quot;: &quot;shirely.bergnaum&quot;,
+                &quot;id&quot;: &quot;5fea2bd4ee11cb000148ea11&quot;,
+                &quot;_links&quot;: {
+                    &quot;addresses&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea2bd4ee11cb000148ea11/addresses&quot;
+                    },
+                    &quot;cards&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea2bd4ee11cb000148ea11/cards&quot;
+                    },
+                    &quot;customer&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea2bd4ee11cb000148ea11&quot;
+                    },
+                    &quot;self&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea2bd4ee11cb000148ea11&quot;
+                    }
+                }
+            },
+            {
+                &quot;firstName&quot;: &quot;Chris&quot;,
+                &quot;lastName&quot;: &quot;Schoen&quot;,
+                &quot;username&quot;: &quot;angela.ritchie&quot;,
+                &quot;id&quot;: &quot;5fea2bd4ee11cb000148ea12&quot;,
+                &quot;_links&quot;: {
+                    &quot;addresses&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea2bd4ee11cb000148ea12/addresses&quot;
+                    },
+                    &quot;cards&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea2bd4ee11cb000148ea12/cards&quot;
+                    },
+                    &quot;customer&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea2bd4ee11cb000148ea12&quot;
+                    },
+                    &quot;self&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea2bd4ee11cb000148ea12&quot;
+                    }
+                }
+            },
+            {
+                &quot;firstName&quot;: &quot;Duane&quot;,
+                &quot;lastName&quot;: &quot;West&quot;,
+                &quot;username&quot;: &quot;latashia.weber&quot;,
+                &quot;id&quot;: &quot;5fea2c1cee11cb000148ea14&quot;,
+                &quot;_links&quot;: {
+                    &quot;addresses&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea2c1cee11cb000148ea14/addresses&quot;
+                    },
+                    &quot;cards&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea2c1cee11cb000148ea14/cards&quot;
+                    },
+                    &quot;customer&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea2c1cee11cb000148ea14&quot;
+                    },
+                    &quot;self&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea2c1cee11cb000148ea14&quot;
+                    }
+                }
+            },
+            {
+                &quot;firstName&quot;: &quot;Tyson&quot;,
+                &quot;lastName&quot;: &quot;Kuhn&quot;,
+                &quot;username&quot;: &quot;terry.murphy&quot;,
+                &quot;id&quot;: &quot;5fea2c1dee11cb000148ea15&quot;,
+                &quot;_links&quot;: {
+                    &quot;addresses&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea2c1dee11cb000148ea15/addresses&quot;
+                    },
+                    &quot;cards&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea2c1dee11cb000148ea15/cards&quot;
+                    },
+                    &quot;customer&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea2c1dee11cb000148ea15&quot;
+                    },
+                    &quot;self&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea2c1dee11cb000148ea15&quot;
+                    }
+                }
+            },
+            {
+                &quot;firstName&quot;: &quot;Theo&quot;,
+                &quot;lastName&quot;: &quot;Gerlach&quot;,
+                &quot;username&quot;: &quot;joslyn.gerhold&quot;,
+                &quot;id&quot;: &quot;5fea2d59ee11cb000148ea17&quot;,
+                &quot;_links&quot;: {
+                    &quot;addresses&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea2d59ee11cb000148ea17/addresses&quot;
+                    },
+                    &quot;cards&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea2d59ee11cb000148ea17/cards&quot;
+                    },
+                    &quot;customer&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea2d59ee11cb000148ea17&quot;
+                    },
+                    &quot;self&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea2d59ee11cb000148ea17&quot;
+                    }
+                }
+            },
+            {
+                &quot;firstName&quot;: &quot;Bonny&quot;,
+                &quot;lastName&quot;: &quot;Mohr&quot;,
+                &quot;username&quot;: &quot;alfonso.senger&quot;,
+                &quot;id&quot;: &quot;5fea2d59ee11cb000148ea18&quot;,
+                &quot;_links&quot;: {
+                    &quot;addresses&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea2d59ee11cb000148ea18/addresses&quot;
+                    },
+                    &quot;cards&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea2d59ee11cb000148ea18/cards&quot;
+                    },
+                    &quot;customer&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea2d59ee11cb000148ea18&quot;
+                    },
+                    &quot;self&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea2d59ee11cb000148ea18&quot;
+                    }
+                }
+            },
+            {
+                &quot;firstName&quot;: &quot;Kelsey&quot;,
+                &quot;lastName&quot;: &quot;Waters&quot;,
+                &quot;username&quot;: &quot;bradley.herman&quot;,
+                &quot;id&quot;: &quot;5fea2dabee11cb000148ea1a&quot;,
+                &quot;_links&quot;: {
+                    &quot;addresses&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea2dabee11cb000148ea1a/addresses&quot;
+                    },
+                    &quot;cards&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea2dabee11cb000148ea1a/cards&quot;
+                    },
+                    &quot;customer&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea2dabee11cb000148ea1a&quot;
+                    },
+                    &quot;self&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea2dabee11cb000148ea1a&quot;
+                    }
+                }
+            },
+            {
+                &quot;firstName&quot;: &quot;Valorie&quot;,
+                &quot;lastName&quot;: &quot;Connelly&quot;,
+                &quot;username&quot;: &quot;burl.kuvalis&quot;,
+                &quot;id&quot;: &quot;5fea2dabee11cb000148ea1b&quot;,
+                &quot;_links&quot;: {
+                    &quot;addresses&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea2dabee11cb000148ea1b/addresses&quot;
+                    },
+                    &quot;cards&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea2dabee11cb000148ea1b/cards&quot;
+                    },
+                    &quot;customer&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea2dabee11cb000148ea1b&quot;
+                    },
+                    &quot;self&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea2dabee11cb000148ea1b&quot;
+                    }
+                }
+            },
+            {
+                &quot;firstName&quot;: &quot;Kennith&quot;,
+                &quot;lastName&quot;: &quot;Nienow&quot;,
+                &quot;username&quot;: &quot;pricilla.mosciski&quot;,
+                &quot;id&quot;: &quot;5fea2e0dee11cb000148ea1d&quot;,
+                &quot;_links&quot;: {
+                    &quot;addresses&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea2e0dee11cb000148ea1d/addresses&quot;
+                    },
+                    &quot;cards&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea2e0dee11cb000148ea1d/cards&quot;
+                    },
+                    &quot;customer&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea2e0dee11cb000148ea1d&quot;
+                    },
+                    &quot;self&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea2e0dee11cb000148ea1d&quot;
+                    }
+                }
+            },
+            {
+                &quot;firstName&quot;: &quot;Carletta&quot;,
+                &quot;lastName&quot;: &quot;Lockman&quot;,
+                &quot;username&quot;: &quot;luke.ritchie&quot;,
+                &quot;id&quot;: &quot;5fea2e0dee11cb000148ea1e&quot;,
+                &quot;_links&quot;: {
+                    &quot;addresses&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea2e0dee11cb000148ea1e/addresses&quot;
+                    },
+                    &quot;cards&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea2e0dee11cb000148ea1e/cards&quot;
+                    },
+                    &quot;customer&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea2e0dee11cb000148ea1e&quot;
+                    },
+                    &quot;self&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea2e0dee11cb000148ea1e&quot;
+                    }
+                }
+            },
+            {
+                &quot;firstName&quot;: &quot;Shane&quot;,
+                &quot;lastName&quot;: &quot;Bayer&quot;,
+                &quot;username&quot;: &quot;rosetta.hintz&quot;,
+                &quot;id&quot;: &quot;5fea31dcee11cb000148ea20&quot;,
+                &quot;_links&quot;: {
+                    &quot;addresses&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea31dcee11cb000148ea20/addresses&quot;
+                    },
+                    &quot;cards&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea31dcee11cb000148ea20/cards&quot;
+                    },
+                    &quot;customer&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea31dcee11cb000148ea20&quot;
+                    },
+                    &quot;self&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea31dcee11cb000148ea20&quot;
+                    }
+                }
+            },
+            {
+                &quot;firstName&quot;: &quot;Kasie&quot;,
+                &quot;lastName&quot;: &quot;Emard&quot;,
+                &quot;username&quot;: &quot;antony.boyer&quot;,
+                &quot;id&quot;: &quot;5fea31dcee11cb000148ea21&quot;,
+                &quot;_links&quot;: {
+                    &quot;addresses&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea31dcee11cb000148ea21/addresses&quot;
+                    },
+                    &quot;cards&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea31dcee11cb000148ea21/cards&quot;
+                    },
+                    &quot;customer&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea31dcee11cb000148ea21&quot;
+                    },
+                    &quot;self&quot;: {
+                        &quot;href&quot;: &quot;http://user/customers/5fea31dcee11cb000148ea21&quot;
+                    }
+                }
+            }
+        ]
+    }
+}
+02:28:29.263 [Test worker] INFO com.socks.api.assertions.AssertableResponse - About to check condition status code is 200
+02:28:29.264 [Test worker] INFO com.socks.api.assertions.AssertableResponse - About to check condition body field [_embedded.customer] not an empty collection
 </pre>
 </span>
 </div>
@@ -278,7 +1285,7 @@ Content-Type: text/plain; charset=utf-8
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 6.1</a> at 12.10.2020 17:56:47</p>
+<a href="http://www.gradle.org">Gradle 6.1</a> at 29.12.2020 2:28:29</p>
 </div>
 </div>
 </body>

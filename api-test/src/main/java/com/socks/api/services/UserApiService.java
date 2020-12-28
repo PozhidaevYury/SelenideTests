@@ -4,9 +4,11 @@ import com.socks.api.assertions.AssertableResponse;
 import com.socks.api.model.Addresses;
 import com.socks.api.model.Card;
 import com.socks.api.model.User;
+import io.qameta.allure.Allure;
 import io.qameta.allure.Step;
 import io.restassured.RestAssured;
 
+import static io.restassured.RestAssured.get;
 import static io.restassured.RestAssured.given;
 
 
@@ -23,16 +25,19 @@ public class UserApiService extends ApiService {
 
     @Step("Get all customers")
     public AssertableResponse getAllCustomers() {
+        Allure.step(get("customers").body().prettyPrint());
         return new AssertableResponse(RestAssured.get("customers"));
     }
 
     @Step("Get customer by id")
     public AssertableResponse getCustomerById() {
+        Allure.step(get("customers/5f82da66ee11cb0001617fef").body().prettyPrint());
         return new AssertableResponse(RestAssured.get("customers/5f82da66ee11cb0001617fef"));
     }
 
     @Step("Get all card")
     public AssertableResponse getAllCards() {
+        Allure.step(get("cards").body().prettyPrint());
         return new AssertableResponse(RestAssured.get("cards"));
     }
 

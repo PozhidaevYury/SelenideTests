@@ -1,29 +1,1899 @@
-Request method:	POST
-'Request URI:	http://localhost:80/cards
-Proxy:			<none>
-Request params:	<none>
-Query params:	<none>
-Form params:	<none>
-Path params:	<none>
-Headers:		Accept=*/*
-1				Content-Type=application/json; charset=UTF-8
-Cookies:		<none>
-Multiparts:		<none>
-Body:
-{
-    "longNum": "1234567890",
-    "expires": "11/21",
-    "ccv": "666",
-)    "userID": "5f842de5ee11cb000154af21"
-}
-HTTP/1.1 200 OK
-$Date: Mon, 12 Oct 2020 10:56:47 GMT
-3Set-Cookie: _TRAEFIK_BACKEND=http://front-end:8079
-vSet-Cookie: md.sid=s%3AcqFq7Ez2QrmWrrLsI0ykl5TVtwcABYNf.ZxYfeirZreZ2LXd1ogaw7MDHqXUpiBTcTJXQEypkGAY; Path=/; HttpOnly
-X-Powered-By: Express
-Content-Length: 86
-(Content-Type: text/plain; charset=utf-8
-
-W{"error":"Do: Invalid Id Hex","status_code":500,"status_text":"Internal Server Error"}
-z17:56:47.522 [Test worker] INFO com.socks.api.assertions.AssertableResponse - About to check condition status code is 200
-ã17:56:47.559 [Test worker] INFO com.socks.api.assertions.AssertableResponse - About to check condition body field [id] not an empty string
+[
+    {
+6        "id": "03fef6ac-1896-4ce8-bd69-b798f85c6e0b",
+        "name": "Holy",
+‡        "description": "Socks fit for a Messiah. You too can experience walking in water with these special edition beauties. Each hole is lovingly proggled to leave smooth edges. The only sock approved by a higher power.",
+        "imageUrl": [
+-            "/catalogue/images/holy_1.jpeg",
+,            "/catalogue/images/holy_2.jpeg"
+        ],
+        "price": 99.99,
+        "count": 1,
+        "tag": [
+            "action",
+            "magic"
+
+        ]
+    },
+    {
+6        "id": "3395a43e-2d88-40de-b95f-e00e1502085b",
+        "name": "Colourful",
+\        "description": "proident occaecat irure et excepteur labore minim nisi amet irure",
+        "imageUrl": [
+5            "/catalogue/images/colourful_socks.jpg",
+4            "/catalogue/images/colourful_socks.jpg"
+        ],
+        "price": 18,
+        "count": 438,
+        "tag": [
+            "brown",
+            "blue"
+
+        ]
+    },
+    {
+6        "id": "510a0d7e-8e83-4193-b483-e27e09ddc34d",
+!        "name": "SuperSport XL",
+’        "description": "Ready for action. Engineers: be ready to smash that next bug! Be ready, with these super-action-sport-masterpieces. This particular engineer was chased away from the office with a stick.",
+        "imageUrl": [
+-            "/catalogue/images/puma_1.jpeg",
+,            "/catalogue/images/puma_2.jpeg"
+        ],
+        "price": 15,
+        "count": 820,
+        "tag": [
+            "sport",
+            "formal",
+            "black"
+
+        ]
+    },
+    {
+6        "id": "808a2de1-1aaa-4c25-a9b9-6612e8f29a38",
+        "name": "Crossed",
+N        "description": "A mature sock, crossed, with an air of nonchalance.",
+        "imageUrl": [
+.            "/catalogue/images/cross_1.jpeg",
+-            "/catalogue/images/cross_2.jpeg"
+        ],
+        "price": 17.32,
+        "count": 738,
+        "tag": [
+            "blue",
+            "action",
+            "red",
+            "formal"
+
+        ]
+    },
+    {
+6        "id": "819e1fbf-8b7e-4f6d-811f-693534916a8b",
+        "name": "Figueroa",
+`        "description": "enim officia aliqua excepteur esse deserunt quis aliquip nostrud anim",
+        "imageUrl": [
+)            "/catalogue/images/WAT.jpg",
+)            "/catalogue/images/WAT2.jpg"
+        ],
+        "price": 14,
+        "count": 808,
+        "tag": [
+            "green",
+            "formal",
+            "blue"
+
+        ]
+    },
+    {
+6        "id": "837ab141-399e-4c1f-9abc-bace40296bac",
+        "name": "Cat socks",
+]        "description": "consequat amet cupidatat minim laborum tempor elit ex consequat in",
+        "imageUrl": [
+.            "/catalogue/images/catsocks.jpg",
+.            "/catalogue/images/catsocks2.jpg"
+        ],
+        "price": 15,
+        "count": 175,
+        "tag": [
+            "brown",
+            "formal",
+            "green"
+
+        ]
+    },
+    {
+6        "id": "a0a4f044-b040-410d-8ead-4de0446aec7e",
+        "name": "Nerd leg",
+∂        "description": "For all those leg lovers out there. A perfect example of a swivel chair trained calf. Meticulously trained on a diet of sitting and Pina Coladas. Phwarr...",
+        "imageUrl": [
+3            "/catalogue/images/bit_of_leg_1.jpeg",
+2            "/catalogue/images/bit_of_leg_2.jpeg"
+        ],
+        "price": 7.99,
+        "count": 115,
+        "tag": [
+            "blue",
+            "skin"
+
+        ]
+    },
+    {
+6        "id": "d3588630-ad8e-49df-bbd7-3167f7efb246",
+         "name": "YouTube.sock",
+U        "description": "We were not paid to sell this sock. It's just a bit geeky.",
+        "imageUrl": [
+0            "/catalogue/images/youtube_1.jpeg",
+/            "/catalogue/images/youtube_2.jpeg"
+        ],
+        "price": 10.99,
+        "count": 801,
+        "tag": [
+            "formal",
+            "geek"
+
+        ]
+    },
+    {
+6        "id": "zzz4f044-b040-410d-8ead-4de0446aec7e",
+        "name": "Classic",
+*        "description": "Keep it simple.",
+        "imageUrl": [
+-            "/catalogue/images/classic.jpg",
+-            "/catalogue/images/classic2.jpg"
+        ],
+        "price": 12,
+        "count": 127,
+        "tag": [
+            "brown",
+            "green"
+
+        ]
+    }
+]
+z02:28:27.360 [Test worker] INFO com.socks.api.assertions.AssertableResponse - About to check condition status code is 200
+ç02:28:27.424 [Test worker] INFO com.socks.api.assertions.AssertableResponse - About to check condition body field [] not an empty collection
+{
+    "size": 9,
+    "err": null
+}
+z02:28:27.693 [Test worker] INFO com.socks.api.assertions.AssertableResponse - About to check condition status code is 200
+ç02:28:27.695 [Test worker] INFO com.socks.api.assertions.AssertableResponse - About to check condition body field [size] not an empty string
+Request method:	POST
+*Request URI:	http://localhost:80/register
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+1				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "password": "test123",
+    "email": "test@gmail.com",
+!    "username": "rosetta.hintz",
+    "firstName": "Shane",
+    "lastName": "Bayer"
+}
+HTTP/1.1 200 OK
+Content-Length: 33
+.Content-Type: application/json; charset=utf-8
+$Date: Mon, 28 Dec 2020 19:28:28 GMT
+)Etag: W/"21-bJW4nilPaq+9ZGth3VxNwxa54Ik"
+3Set-Cookie: _TRAEFIK_BACKEND=http://front-end:8079
+tSet-Cookie: logged_in=X3u9UFl-9D0STvfPIISD0q4vOlqLe5uU; Max-Age=3600; Path=/; Expires=Mon, 28 Dec 2020 20:28:28 GMT
+zSet-Cookie: md.sid=s%3AX3u9UFl-9D0STvfPIISD0q4vOlqLe5uU.o1R5H3sG%2BA04NcVOq5vbNINq6ZGkAzJsS%2FPG7WIAhrQ; Path=/; HttpOnly
+X-Powered-By: Express
+
+{
+%    "id": "5fea31dcee11cb000148ea20"
+}
+z02:28:28.664 [Test worker] INFO com.socks.api.assertions.AssertableResponse - About to check condition status code is 200
+ã02:28:28.664 [Test worker] INFO com.socks.api.assertions.AssertableResponse - About to check condition body field [id] not an empty string
+Request method:	POST
+*Request URI:	http://localhost:80/register
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+1				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "password": "test123",
+    "email": "test@gmail.com",
+     "username": "antony.boyer",
+    "firstName": "Kasie",
+    "lastName": "Emard"
+}
+HTTP/1.1 200 OK
+Content-Length: 33
+.Content-Type: application/json; charset=utf-8
+$Date: Mon, 28 Dec 2020 19:28:28 GMT
+)Etag: W/"21-1HqUzGDneC9JKieAlTWhaim0svE"
+3Set-Cookie: _TRAEFIK_BACKEND=http://front-end:8079
+tSet-Cookie: logged_in=YSnyd9hj2jy29HsdKg0FIKsQ8SxYTObw; Max-Age=3600; Path=/; Expires=Mon, 28 Dec 2020 20:28:28 GMT
+xSet-Cookie: md.sid=s%3AYSnyd9hj2jy29HsdKg0FIKsQ8SxYTObw.SjqNk6yxhg5CiuzSpTM%2FhKMdmu6F1oH33qSSUpszDsE; Path=/; HttpOnly
+X-Powered-By: Express
+
+{
+%    "id": "5fea31dcee11cb000148ea21"
+}
+z02:28:28.778 [Test worker] INFO com.socks.api.assertions.AssertableResponse - About to check condition status code is 200
+ã02:28:28.779 [Test worker] INFO com.socks.api.assertions.AssertableResponse - About to check condition body field [id] not an empty string
+Request method:	POST
+*Request URI:	http://localhost:80/register
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+1				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "password": "test123",
+    "email": "test@gmail.com",
+     "username": "antony.boyer",
+    "firstName": "Kasie",
+    "lastName": "Emard"
+}
+#HTTP/1.1 500 Internal Server Error
+Content-Length: 0
+$Date: Mon, 28 Dec 2020 19:28:28 GMT
+3Set-Cookie: _TRAEFIK_BACKEND=http://front-end:8079
+zSet-Cookie: md.sid=s%3AzkoGB2QPoyAB154PDfWrtM9XBqvDCT_9.DKO0Ca1G%2FATGTje6dyY2XYOJEAVq4s1Z%2BNJBSWEGBFk; Path=/; HttpOnly
+X-Powered-By: Express
+(Content-Type: text/plain; charset=utf-8
+z02:28:28.840 [Test worker] INFO com.socks.api.assertions.AssertableResponse - About to check condition status code is 500
+z02:28:28.904 [Test worker] INFO com.socks.api.assertions.AssertableResponse - About to check condition status code is 200
+á02:28:28.905 [Test worker] INFO com.socks.api.assertions.AssertableResponse - About to check condition body field [id] an empty string
+z02:28:28.982 [Test worker] INFO com.socks.api.assertions.AssertableResponse - About to check condition status code is 200
+	{
+	    "_embedded": {
+	        "card": [
+	            {
+	/                "longNum": "5953580604169678",
+	$                "expires": "08/19",
+	                "ccv": "678",
+	2                "id": "57a98d98e4b00679b4a830ae",
+	                "_links": {
+	                    "card": {
+	M                        "href": "http://user/cards/57a98d98e4b00679b4a830ae"
+	                    },
+	                    "self": {
+	M                        "href": "http://user/cards/57a98d98e4b00679b4a830ae"
+	                    }
+	                }
+	            },
+	            {
+	/                "longNum": "5544154011345918",
+	$                "expires": "08/19",
+	                "ccv": "958",
+	2                "id": "57a98d98e4b00679b4a830b1",
+	                "_links": {
+	                    "card": {
+	M                        "href": "http://user/cards/57a98d98e4b00679b4a830b1"
+	                    },
+	                    "self": {
+	M                        "href": "http://user/cards/57a98d98e4b00679b4a830b1"
+	                    }
+	                }
+	            },
+	            {
+	/                "longNum": "0908415193175205",
+	$                "expires": "08/19",
+	                "ccv": "280",
+	2                "id": "57a98d98e4b00679b4a830b4",
+	                "_links": {
+	                    "card": {
+	M                        "href": "http://user/cards/57a98d98e4b00679b4a830b4"
+	                    },
+	                    "self": {
+	M                        "href": "http://user/cards/57a98d98e4b00679b4a830b4"
+	                    }
+	                }
+	            },
+	            {
+	,                "longNum": "5429804235432",
+	$                "expires": "04/16",
+	                "ccv": "432",
+	2                "id": "57a98ddce4b00679b4a830d2",
+	                "_links": {
+	                    "card": {
+	M                        "href": "http://user/cards/57a98ddce4b00679b4a830d2"
+	                    },
+	                    "self": {
+	M                        "href": "http://user/cards/57a98ddce4b00679b4a830d2"
+	                    }
+	                }
+	            }
+	
+        ]
+	    }
+	}
+	z02:28:29.116 [Test worker] INFO com.socks.api.assertions.AssertableResponse - About to check condition status code is 200
+	õ02:28:29.116 [Test worker] INFO com.socks.api.assertions.AssertableResponse - About to check condition body field [_embedded.card] not an empty collection
+
+{
+
+    "_embedded": {
+
+        "customer": [
+
+            {
+
+$                "firstName": "Eve",
+
+&                "lastName": "Berger",
+
+*                "username": "Eve_Berger",
+
+2                "id": "57a98d98e4b00679b4a830af",
+
+                "_links": {
+
+#                    "addresses": {
+
+[                        "href": "http://user/customers/57a98d98e4b00679b4a830af/addresses"
+
+                    },
+
+                    "cards": {
+
+W                        "href": "http://user/customers/57a98d98e4b00679b4a830af/cards"
+
+                    },
+
+"                    "customer": {
+
+Q                        "href": "http://user/customers/57a98d98e4b00679b4a830af"
+
+                    },
+
+                    "self": {
+
+Q                        "href": "http://user/customers/57a98d98e4b00679b4a830af"
+
+                    }
+
+                }
+
+            },
+
+            {
+
+%                "firstName": "User",
+
+$                "lastName": "Name",
+
+$                "username": "user",
+
+2                "id": "57a98d98e4b00679b4a830b2",
+
+                "_links": {
+
+#                    "addresses": {
+
+[                        "href": "http://user/customers/57a98d98e4b00679b4a830b2/addresses"
+
+                    },
+
+                    "cards": {
+
+W                        "href": "http://user/customers/57a98d98e4b00679b4a830b2/cards"
+
+                    },
+
+"                    "customer": {
+
+Q                        "href": "http://user/customers/57a98d98e4b00679b4a830b2"
+
+                    },
+
+                    "self": {
+
+Q                        "href": "http://user/customers/57a98d98e4b00679b4a830b2"
+
+                    }
+
+                }
+
+            },
+
+            {
+
+&                "firstName": "User1",
+
+%                "lastName": "Name1",
+
+%                "username": "user1",
+
+2                "id": "57a98d98e4b00679b4a830b5",
+
+                "_links": {
+
+#                    "addresses": {
+
+[                        "href": "http://user/customers/57a98d98e4b00679b4a830b5/addresses"
+
+                    },
+
+                    "cards": {
+
+W                        "href": "http://user/customers/57a98d98e4b00679b4a830b5/cards"
+
+                    },
+
+"                    "customer": {
+
+Q                        "href": "http://user/customers/57a98d98e4b00679b4a830b5"
+
+                    },
+
+                    "self": {
+
+Q                        "href": "http://user/customers/57a98d98e4b00679b4a830b5"
+
+                    }
+
+                }
+
+            },
+
+            {
+
+(                "firstName": "Emerson",
+
+(                "lastName": "Baumbach",
+
+,                "username": "aubrey.bogan",
+
+2                "id": "5fea0fc1ee11cb000148e9ed",
+
+                "_links": {
+
+#                    "addresses": {
+
+[                        "href": "http://user/customers/5fea0fc1ee11cb000148e9ed/addresses"
+
+                    },
+
+                    "cards": {
+
+W                        "href": "http://user/customers/5fea0fc1ee11cb000148e9ed/cards"
+
+                    },
+
+"                    "customer": {
+
+Q                        "href": "http://user/customers/5fea0fc1ee11cb000148e9ed"
+
+                    },
+
+                    "self": {
+
+Q                        "href": "http://user/customers/5fea0fc1ee11cb000148e9ed"
+
+                    }
+
+                }
+
+            },
+
+            {
+
+%                "firstName": "Mary",
+
+$                "lastName": "Roob",
+
+-                "username": "lucio.bradtke",
+
+2                "id": "5fea0fc1ee11cb000148e9ee",
+
+                "_links": {
+
+#                    "addresses": {
+
+[                        "href": "http://user/customers/5fea0fc1ee11cb000148e9ee/addresses"
+
+                    },
+
+                    "cards": {
+
+W                        "href": "http://user/customers/5fea0fc1ee11cb000148e9ee/cards"
+
+                    },
+
+"                    "customer": {
+
+Q                        "href": "http://user/customers/5fea0fc1ee11cb000148e9ee"
+
+                    },
+
+                    "self": {
+
+Q                        "href": "http://user/customers/5fea0fc1ee11cb000148e9ee"
+
+                    }
+
+                }
+
+            },
+
+            {
+
+&                "firstName": "Marni",
+
+'                "lastName": "Hilpert",
+
+0                "username": "dorathy.medhurst",
+
+2                "id": "5fea10e4ee11cb000148e9f0",
+
+                "_links": {
+
+#                    "addresses": {
+
+[                        "href": "http://user/customers/5fea10e4ee11cb000148e9f0/addresses"
+
+                    },
+
+                    "cards": {
+
+W                        "href": "http://user/customers/5fea10e4ee11cb000148e9f0/cards"
+
+                    },
+
+"                    "customer": {
+
+Q                        "href": "http://user/customers/5fea10e4ee11cb000148e9f0"
+
+                    },
+
+                    "self": {
+
+Q                        "href": "http://user/customers/5fea10e4ee11cb000148e9f0"
+
+                    }
+
+                }
+
+            },
+
+            {
+
+'                "firstName": "Eugena",
+
+(                "lastName": "Nikolaus",
+
+'                "username": "ta.bins",
+
+2                "id": "5fea10e5ee11cb000148e9f1",
+
+                "_links": {
+
+#                    "addresses": {
+
+[                        "href": "http://user/customers/5fea10e5ee11cb000148e9f1/addresses"
+
+                    },
+
+                    "cards": {
+
+W                        "href": "http://user/customers/5fea10e5ee11cb000148e9f1/cards"
+
+                    },
+
+"                    "customer": {
+
+Q                        "href": "http://user/customers/5fea10e5ee11cb000148e9f1"
+
+                    },
+
+                    "self": {
+
+Q                        "href": "http://user/customers/5fea10e5ee11cb000148e9f1"
+
+                    }
+
+                }
+
+            },
+
+            {
+
+'                "firstName": "Ronald",
+
+&                "lastName": "Abbott",
+
+/                "username": "damien.tremblay",
+
+2                "id": "5fea11e1ee11cb000148e9f3",
+
+                "_links": {
+
+#                    "addresses": {
+
+[                        "href": "http://user/customers/5fea11e1ee11cb000148e9f3/addresses"
+
+                    },
+
+                    "cards": {
+
+W                        "href": "http://user/customers/5fea11e1ee11cb000148e9f3/cards"
+
+                    },
+
+"                    "customer": {
+
+Q                        "href": "http://user/customers/5fea11e1ee11cb000148e9f3"
+
+                    },
+
+                    "self": {
+
+Q                        "href": "http://user/customers/5fea11e1ee11cb000148e9f3"
+
+                    }
+
+                }
+
+            },
+
+            {
+
+(                "firstName": "Arnetta",
+
+'                "lastName": "Schuppe",
+
+*                "username": "gerry.wiza",
+
+2                "id": "5fea11e1ee11cb000148e9f4",
+
+                "_links": {
+
+#                    "addresses": {
+
+[                        "href": "http://user/customers/5fea11e1ee11cb000148e9f4/addresses"
+
+                    },
+
+                    "cards": {
+
+W                        "href": "http://user/customers/5fea11e1ee11cb000148e9f4/cards"
+
+                    },
+
+"                    "customer": {
+
+Q                        "href": "http://user/customers/5fea11e1ee11cb000148e9f4"
+
+                    },
+
+                    "self": {
+
+Q                        "href": "http://user/customers/5fea11e1ee11cb000148e9f4"
+
+                    }
+
+                }
+
+            },
+
+            {
+
+&                "firstName": "Launa",
+
+)                "lastName": "Wilderman",
+
++                "username": "mickey.haag",
+
+2                "id": "5fea133bee11cb000148e9f6",
+
+                "_links": {
+
+#                    "addresses": {
+
+[                        "href": "http://user/customers/5fea133bee11cb000148e9f6/addresses"
+
+                    },
+
+                    "cards": {
+
+W                        "href": "http://user/customers/5fea133bee11cb000148e9f6/cards"
+
+                    },
+
+"                    "customer": {
+
+Q                        "href": "http://user/customers/5fea133bee11cb000148e9f6"
+
+                    },
+
+                    "self": {
+
+Q                        "href": "http://user/customers/5fea133bee11cb000148e9f6"
+
+                    }
+
+                }
+
+            },
+
+            {
+
+%                "firstName": "Illa",
+
+%                "lastName": "Upton",
+
+,                "username": "warren.wyman",
+
+2                "id": "5fea133bee11cb000148e9f7",
+
+                "_links": {
+
+#                    "addresses": {
+
+[                        "href": "http://user/customers/5fea133bee11cb000148e9f7/addresses"
+
+                    },
+
+                    "cards": {
+
+W                        "href": "http://user/customers/5fea133bee11cb000148e9f7/cards"
+
+                    },
+
+"                    "customer": {
+
+Q                        "href": "http://user/customers/5fea133bee11cb000148e9f7"
+
+                    },
+
+                    "self": {
+
+Q                        "href": "http://user/customers/5fea133bee11cb000148e9f7"
+
+                    }
+
+                }
+
+            },
+
+            {
+
+(                "firstName": "Rosalee",
+
+(                "lastName": "Bernhard",
+
+*                "username": "ernie.mraz",
+
+2                "id": "5fea1488ee11cb000148e9f9",
+
+                "_links": {
+
+#                    "addresses": {
+
+[                        "href": "http://user/customers/5fea1488ee11cb000148e9f9/addresses"
+
+                    },
+
+                    "cards": {
+
+W                        "href": "http://user/customers/5fea1488ee11cb000148e9f9/cards"
+
+                    },
+
+"                    "customer": {
+
+Q                        "href": "http://user/customers/5fea1488ee11cb000148e9f9"
+
+                    },
+
+                    "self": {
+
+Q                        "href": "http://user/customers/5fea1488ee11cb000148e9f9"
+
+                    }
+
+                }
+
+            },
+
+            {
+
+%                "firstName": "Tora",
+
+*                "lastName": "Altenwerth",
+
+4                "username": "jacqulyn.heidenreich",
+
+2                "id": "5fea1488ee11cb000148e9fa",
+
+                "_links": {
+
+#                    "addresses": {
+
+[                        "href": "http://user/customers/5fea1488ee11cb000148e9fa/addresses"
+
+                    },
+
+                    "cards": {
+
+W                        "href": "http://user/customers/5fea1488ee11cb000148e9fa/cards"
+
+                    },
+
+"                    "customer": {
+
+Q                        "href": "http://user/customers/5fea1488ee11cb000148e9fa"
+
+                    },
+
+                    "self": {
+
+Q                        "href": "http://user/customers/5fea1488ee11cb000148e9fa"
+
+                    }
+
+                }
+
+            },
+
+            {
+
+)                "firstName": "Agustina",
+
+(                "lastName": "Mitchell",
+
+,                "username": "tracie.hauck",
+
+2                "id": "5fea20f4ee11cb000148e9fc",
+
+                "_links": {
+
+#                    "addresses": {
+
+[                        "href": "http://user/customers/5fea20f4ee11cb000148e9fc/addresses"
+
+                    },
+
+                    "cards": {
+
+W                        "href": "http://user/customers/5fea20f4ee11cb000148e9fc/cards"
+
+                    },
+
+"                    "customer": {
+
+Q                        "href": "http://user/customers/5fea20f4ee11cb000148e9fc"
+
+                    },
+
+                    "self": {
+
+Q                        "href": "http://user/customers/5fea20f4ee11cb000148e9fc"
+
+                    }
+
+                }
+
+            },
+
+            {
+
+&                "firstName": "Kirby",
+
+&                "lastName": "Jacobs",
+
+2                "username": "katheleen.baumbach",
+
+2                "id": "5fea20f4ee11cb000148e9fd",
+
+                "_links": {
+
+#                    "addresses": {
+
+[                        "href": "http://user/customers/5fea20f4ee11cb000148e9fd/addresses"
+
+                    },
+
+                    "cards": {
+
+W                        "href": "http://user/customers/5fea20f4ee11cb000148e9fd/cards"
+
+                    },
+
+"                    "customer": {
+
+Q                        "href": "http://user/customers/5fea20f4ee11cb000148e9fd"
+
+                    },
+
+                    "self": {
+
+Q                        "href": "http://user/customers/5fea20f4ee11cb000148e9fd"
+
+                    }
+
+                }
+
+            },
+
+            {
+
+'                "firstName": "Marvel",
+
+'                "lastName": "Bartell",
+
+.                "username": "joellen.muller",
+
+2                "id": "5fea2685ee11cb000148e9ff",
+
+                "_links": {
+
+#                    "addresses": {
+
+[                        "href": "http://user/customers/5fea2685ee11cb000148e9ff/addresses"
+
+                    },
+
+                    "cards": {
+
+W                        "href": "http://user/customers/5fea2685ee11cb000148e9ff/cards"
+
+                    },
+
+"                    "customer": {
+
+Q                        "href": "http://user/customers/5fea2685ee11cb000148e9ff"
+
+                    },
+
+                    "self": {
+
+Q                        "href": "http://user/customers/5fea2685ee11cb000148e9ff"
+
+                    }
+
+                }
+
+            },
+
+            {
+
+'                "firstName": "Penney",
+
+%                "lastName": "Boyer",
+
+1                "username": "joette.schowalter",
+
+2                "id": "5fea2685ee11cb000148ea00",
+
+                "_links": {
+
+#                    "addresses": {
+
+[                        "href": "http://user/customers/5fea2685ee11cb000148ea00/addresses"
+
+                    },
+
+                    "cards": {
+
+W                        "href": "http://user/customers/5fea2685ee11cb000148ea00/cards"
+
+                    },
+
+"                    "customer": {
+
+Q                        "href": "http://user/customers/5fea2685ee11cb000148ea00"
+
+                    },
+
+                    "self": {
+
+Q                        "href": "http://user/customers/5fea2685ee11cb000148ea00"
+
+                    }
+
+                }
+
+            },
+
+            {
+
+'                "firstName": "Morton",
+
+&                "lastName": "Fisher",
+
+,                "username": "keiko.dooley",
+
+2                "id": "5fea2823ee11cb000148ea02",
+
+                "_links": {
+
+#                    "addresses": {
+
+[                        "href": "http://user/customers/5fea2823ee11cb000148ea02/addresses"
+
+                    },
+
+                    "cards": {
+
+W                        "href": "http://user/customers/5fea2823ee11cb000148ea02/cards"
+
+                    },
+
+"                    "customer": {
+
+Q                        "href": "http://user/customers/5fea2823ee11cb000148ea02"
+
+                    },
+
+                    "self": {
+
+Q                        "href": "http://user/customers/5fea2823ee11cb000148ea02"
+
+                    }
+
+                }
+
+            },
+
+            {
+
+'                "firstName": "Marica",
+
+$                "lastName": "Bins",
+
+.                "username": "johnny.pfeffer",
+
+2                "id": "5fea2823ee11cb000148ea03",
+
+                "_links": {
+
+#                    "addresses": {
+
+[                        "href": "http://user/customers/5fea2823ee11cb000148ea03/addresses"
+
+                    },
+
+                    "cards": {
+
+W                        "href": "http://user/customers/5fea2823ee11cb000148ea03/cards"
+
+                    },
+
+"                    "customer": {
+
+Q                        "href": "http://user/customers/5fea2823ee11cb000148ea03"
+
+                    },
+
+                    "self": {
+
+Q                        "href": "http://user/customers/5fea2823ee11cb000148ea03"
+
+                    }
+
+                }
+
+            },
+
+            {
+
+'                "firstName": "Jammie",
+
+(                "lastName": "Ondricka",
+
+0                "username": "josephina.stokes",
+
+2                "id": "5fea28caee11cb000148ea05",
+
+                "_links": {
+
+#                    "addresses": {
+
+[                        "href": "http://user/customers/5fea28caee11cb000148ea05/addresses"
+
+                    },
+
+                    "cards": {
+
+W                        "href": "http://user/customers/5fea28caee11cb000148ea05/cards"
+
+                    },
+
+"                    "customer": {
+
+Q                        "href": "http://user/customers/5fea28caee11cb000148ea05"
+
+                    },
+
+                    "self": {
+
+Q                        "href": "http://user/customers/5fea28caee11cb000148ea05"
+
+                    }
+
+                }
+
+            },
+
+            {
+
+'                "firstName": "Robert",
+
+'                "lastName": "Gerlach",
+
+.                "username": "wilbur.schmitt",
+
+2                "id": "5fea28caee11cb000148ea06",
+
+                "_links": {
+
+#                    "addresses": {
+
+[                        "href": "http://user/customers/5fea28caee11cb000148ea06/addresses"
+
+                    },
+
+                    "cards": {
+
+W                        "href": "http://user/customers/5fea28caee11cb000148ea06/cards"
+
+                    },
+
+"                    "customer": {
+
+Q                        "href": "http://user/customers/5fea28caee11cb000148ea06"
+
+                    },
+
+                    "self": {
+
+Q                        "href": "http://user/customers/5fea28caee11cb000148ea06"
+
+                    }
+
+                }
+
+            },
+
+            {
+
+'                "firstName": "Darryl",
+
+&                "lastName": "Heaney",
+
+/                "username": "beryl.wilderman",
+
+2                "id": "5fea2924ee11cb000148ea08",
+
+                "_links": {
+
+#                    "addresses": {
+
+[                        "href": "http://user/customers/5fea2924ee11cb000148ea08/addresses"
+
+                    },
+
+                    "cards": {
+
+W                        "href": "http://user/customers/5fea2924ee11cb000148ea08/cards"
+
+                    },
+
+"                    "customer": {
+
+Q                        "href": "http://user/customers/5fea2924ee11cb000148ea08"
+
+                    },
+
+                    "self": {
+
+Q                        "href": "http://user/customers/5fea2924ee11cb000148ea08"
+
+                    }
+
+                }
+
+            },
+
+            {
+
+&                "firstName": "Allen",
+
+$                "lastName": "Rath",
+
+,                "username": "andreas.beer",
+
+2                "id": "5fea2925ee11cb000148ea09",
+
+                "_links": {
+
+#                    "addresses": {
+
+[                        "href": "http://user/customers/5fea2925ee11cb000148ea09/addresses"
+
+                    },
+
+                    "cards": {
+
+W                        "href": "http://user/customers/5fea2925ee11cb000148ea09/cards"
+
+                    },
+
+"                    "customer": {
+
+Q                        "href": "http://user/customers/5fea2925ee11cb000148ea09"
+
+                    },
+
+                    "self": {
+
+Q                        "href": "http://user/customers/5fea2925ee11cb000148ea09"
+
+                    }
+
+                }
+
+            },
+
+            {
+
+'                "firstName": "Phuong",
+
+&                "lastName": "Nienow",
+
+/                "username": "margurite.hintz",
+
+2                "id": "5fea294cee11cb000148ea0b",
+
+                "_links": {
+
+#                    "addresses": {
+
+[                        "href": "http://user/customers/5fea294cee11cb000148ea0b/addresses"
+
+                    },
+
+                    "cards": {
+
+W                        "href": "http://user/customers/5fea294cee11cb000148ea0b/cards"
+
+                    },
+
+"                    "customer": {
+
+Q                        "href": "http://user/customers/5fea294cee11cb000148ea0b"
+
+                    },
+
+                    "self": {
+
+Q                        "href": "http://user/customers/5fea294cee11cb000148ea0b"
+
+                    }
+
+                }
+
+            },
+
+            {
+
+%                "firstName": "Dave",
+
+'                "lastName": "Witting",
+
+,                "username": "sallie.bosco",
+
+2                "id": "5fea294cee11cb000148ea0c",
+
+                "_links": {
+
+#                    "addresses": {
+
+[                        "href": "http://user/customers/5fea294cee11cb000148ea0c/addresses"
+
+                    },
+
+                    "cards": {
+
+W                        "href": "http://user/customers/5fea294cee11cb000148ea0c/cards"
+
+                    },
+
+"                    "customer": {
+
+Q                        "href": "http://user/customers/5fea294cee11cb000148ea0c"
+
+                    },
+
+                    "self": {
+
+Q                        "href": "http://user/customers/5fea294cee11cb000148ea0c"
+
+                    }
+
+                }
+
+            },
+
+            {
+
+(                "firstName": "Earnest",
+
+$                "lastName": "Feil",
+
+0                "username": "terence.bergnaum",
+
+2                "id": "5fea2b5eee11cb000148ea0e",
+
+                "_links": {
+
+#                    "addresses": {
+
+[                        "href": "http://user/customers/5fea2b5eee11cb000148ea0e/addresses"
+
+                    },
+
+                    "cards": {
+
+W                        "href": "http://user/customers/5fea2b5eee11cb000148ea0e/cards"
+
+                    },
+
+"                    "customer": {
+
+Q                        "href": "http://user/customers/5fea2b5eee11cb000148ea0e"
+
+                    },
+
+                    "self": {
+
+Q                        "href": "http://user/customers/5fea2b5eee11cb000148ea0e"
+
+                    }
+
+                }
+
+            },
+
+            {
+
+$                "firstName": "Wei",
+
+'                "lastName": "Wuckert",
+
+/                "username": "desirae.murazik",
+
+2                "id": "5fea2b5eee11cb000148ea0f",
+
+                "_links": {
+
+#                    "addresses": {
+
+[                        "href": "http://user/customers/5fea2b5eee11cb000148ea0f/addresses"
+
+                    },
+
+                    "cards": {
+
+W                        "href": "http://user/customers/5fea2b5eee11cb000148ea0f/cards"
+
+                    },
+
+"                    "customer": {
+
+Q                        "href": "http://user/customers/5fea2b5eee11cb000148ea0f"
+
+                    },
+
+                    "self": {
+
+Q                        "href": "http://user/customers/5fea2b5eee11cb000148ea0f"
+
+                    }
+
+                }
+
+            },
+
+            {
+
+&                "firstName": "Sandi",
+
+%                "lastName": "Wolff",
+
+0                "username": "shirely.bergnaum",
+
+2                "id": "5fea2bd4ee11cb000148ea11",
+
+                "_links": {
+
+#                    "addresses": {
+
+[                        "href": "http://user/customers/5fea2bd4ee11cb000148ea11/addresses"
+
+                    },
+
+                    "cards": {
+
+W                        "href": "http://user/customers/5fea2bd4ee11cb000148ea11/cards"
+
+                    },
+
+"                    "customer": {
+
+Q                        "href": "http://user/customers/5fea2bd4ee11cb000148ea11"
+
+                    },
+
+                    "self": {
+
+Q                        "href": "http://user/customers/5fea2bd4ee11cb000148ea11"
+
+                    }
+
+                }
+
+            },
+
+            {
+
+&                "firstName": "Chris",
+
+&                "lastName": "Schoen",
+
+.                "username": "angela.ritchie",
+
+2                "id": "5fea2bd4ee11cb000148ea12",
+
+                "_links": {
+
+#                    "addresses": {
+
+[                        "href": "http://user/customers/5fea2bd4ee11cb000148ea12/addresses"
+
+                    },
+
+                    "cards": {
+
+W                        "href": "http://user/customers/5fea2bd4ee11cb000148ea12/cards"
+
+                    },
+
+"                    "customer": {
+
+Q                        "href": "http://user/customers/5fea2bd4ee11cb000148ea12"
+
+                    },
+
+                    "self": {
+
+Q                        "href": "http://user/customers/5fea2bd4ee11cb000148ea12"
+
+                    }
+
+                }
+
+            },
+
+            {
+
+&                "firstName": "Duane",
+
+$                "lastName": "West",
+
+.                "username": "latashia.weber",
+
+2                "id": "5fea2c1cee11cb000148ea14",
+
+                "_links": {
+
+#                    "addresses": {
+
+[                        "href": "http://user/customers/5fea2c1cee11cb000148ea14/addresses"
+
+                    },
+
+                    "cards": {
+
+W                        "href": "http://user/customers/5fea2c1cee11cb000148ea14/cards"
+
+                    },
+
+"                    "customer": {
+
+Q                        "href": "http://user/customers/5fea2c1cee11cb000148ea14"
+
+                    },
+
+                    "self": {
+
+Q                        "href": "http://user/customers/5fea2c1cee11cb000148ea14"
+
+                    }
+
+                }
+
+            },
+
+            {
+
+&                "firstName": "Tyson",
+
+$                "lastName": "Kuhn",
+
+,                "username": "terry.murphy",
+
+2                "id": "5fea2c1dee11cb000148ea15",
+
+                "_links": {
+
+#                    "addresses": {
+
+[                        "href": "http://user/customers/5fea2c1dee11cb000148ea15/addresses"
+
+                    },
+
+                    "cards": {
+
+W                        "href": "http://user/customers/5fea2c1dee11cb000148ea15/cards"
+
+                    },
+
+"                    "customer": {
+
+Q                        "href": "http://user/customers/5fea2c1dee11cb000148ea15"
+
+                    },
+
+                    "self": {
+
+Q                        "href": "http://user/customers/5fea2c1dee11cb000148ea15"
+
+                    }
+
+                }
+
+            },
+
+            {
+
+%                "firstName": "Theo",
+
+'                "lastName": "Gerlach",
+
+.                "username": "joslyn.gerhold",
+
+2                "id": "5fea2d59ee11cb000148ea17",
+
+                "_links": {
+
+#                    "addresses": {
+
+[                        "href": "http://user/customers/5fea2d59ee11cb000148ea17/addresses"
+
+                    },
+
+                    "cards": {
+
+W                        "href": "http://user/customers/5fea2d59ee11cb000148ea17/cards"
+
+                    },
+
+"                    "customer": {
+
+Q                        "href": "http://user/customers/5fea2d59ee11cb000148ea17"
+
+                    },
+
+                    "self": {
+
+Q                        "href": "http://user/customers/5fea2d59ee11cb000148ea17"
+
+                    }
+
+                }
+
+            },
+
+            {
+
+&                "firstName": "Bonny",
+
+$                "lastName": "Mohr",
+
+.                "username": "alfonso.senger",
+
+2                "id": "5fea2d59ee11cb000148ea18",
+
+                "_links": {
+
+#                    "addresses": {
+
+[                        "href": "http://user/customers/5fea2d59ee11cb000148ea18/addresses"
+
+                    },
+
+                    "cards": {
+
+W                        "href": "http://user/customers/5fea2d59ee11cb000148ea18/cards"
+
+                    },
+
+"                    "customer": {
+
+Q                        "href": "http://user/customers/5fea2d59ee11cb000148ea18"
+
+                    },
+
+                    "self": {
+
+Q                        "href": "http://user/customers/5fea2d59ee11cb000148ea18"
+
+                    }
+
+                }
+
+            },
+
+            {
+
+'                "firstName": "Kelsey",
+
+&                "lastName": "Waters",
+
+.                "username": "bradley.herman",
+
+2                "id": "5fea2dabee11cb000148ea1a",
+
+                "_links": {
+
+#                    "addresses": {
+
+[                        "href": "http://user/customers/5fea2dabee11cb000148ea1a/addresses"
+
+                    },
+
+                    "cards": {
+
+W                        "href": "http://user/customers/5fea2dabee11cb000148ea1a/cards"
+
+                    },
+
+"                    "customer": {
+
+Q                        "href": "http://user/customers/5fea2dabee11cb000148ea1a"
+
+                    },
+
+                    "self": {
+
+Q                        "href": "http://user/customers/5fea2dabee11cb000148ea1a"
+
+                    }
+
+                }
+
+            },
+
+            {
+
+(                "firstName": "Valorie",
+
+(                "lastName": "Connelly",
+
+,                "username": "burl.kuvalis",
+
+2                "id": "5fea2dabee11cb000148ea1b",
+
+                "_links": {
+
+#                    "addresses": {
+
+[                        "href": "http://user/customers/5fea2dabee11cb000148ea1b/addresses"
+
+                    },
+
+                    "cards": {
+
+W                        "href": "http://user/customers/5fea2dabee11cb000148ea1b/cards"
+
+                    },
+
+"                    "customer": {
+
+Q                        "href": "http://user/customers/5fea2dabee11cb000148ea1b"
+
+                    },
+
+                    "self": {
+
+Q                        "href": "http://user/customers/5fea2dabee11cb000148ea1b"
+
+                    }
+
+                }
+
+            },
+
+            {
+
+(                "firstName": "Kennith",
+
+&                "lastName": "Nienow",
+
+1                "username": "pricilla.mosciski",
+
+2                "id": "5fea2e0dee11cb000148ea1d",
+
+                "_links": {
+
+#                    "addresses": {
+
+[                        "href": "http://user/customers/5fea2e0dee11cb000148ea1d/addresses"
+
+                    },
+
+                    "cards": {
+
+W                        "href": "http://user/customers/5fea2e0dee11cb000148ea1d/cards"
+
+                    },
+
+"                    "customer": {
+
+Q                        "href": "http://user/customers/5fea2e0dee11cb000148ea1d"
+
+                    },
+
+                    "self": {
+
+Q                        "href": "http://user/customers/5fea2e0dee11cb000148ea1d"
+
+                    }
+
+                }
+
+            },
+
+            {
+
+)                "firstName": "Carletta",
+
+'                "lastName": "Lockman",
+
+,                "username": "luke.ritchie",
+
+2                "id": "5fea2e0dee11cb000148ea1e",
+
+                "_links": {
+
+#                    "addresses": {
+
+[                        "href": "http://user/customers/5fea2e0dee11cb000148ea1e/addresses"
+
+                    },
+
+                    "cards": {
+
+W                        "href": "http://user/customers/5fea2e0dee11cb000148ea1e/cards"
+
+                    },
+
+"                    "customer": {
+
+Q                        "href": "http://user/customers/5fea2e0dee11cb000148ea1e"
+
+                    },
+
+                    "self": {
+
+Q                        "href": "http://user/customers/5fea2e0dee11cb000148ea1e"
+
+                    }
+
+                }
+
+            },
+
+            {
+
+&                "firstName": "Shane",
+
+%                "lastName": "Bayer",
+
+-                "username": "rosetta.hintz",
+
+2                "id": "5fea31dcee11cb000148ea20",
+
+                "_links": {
+
+#                    "addresses": {
+
+[                        "href": "http://user/customers/5fea31dcee11cb000148ea20/addresses"
+
+                    },
+
+                    "cards": {
+
+W                        "href": "http://user/customers/5fea31dcee11cb000148ea20/cards"
+
+                    },
+
+"                    "customer": {
+
+Q                        "href": "http://user/customers/5fea31dcee11cb000148ea20"
+
+                    },
+
+                    "self": {
+
+Q                        "href": "http://user/customers/5fea31dcee11cb000148ea20"
+
+                    }
+
+                }
+
+            },
+
+            {
+
+&                "firstName": "Kasie",
+
+%                "lastName": "Emard",
+
+,                "username": "antony.boyer",
+
+2                "id": "5fea31dcee11cb000148ea21",
+
+                "_links": {
+
+#                    "addresses": {
+
+[                        "href": "http://user/customers/5fea31dcee11cb000148ea21/addresses"
+
+                    },
+
+                    "cards": {
+
+W                        "href": "http://user/customers/5fea31dcee11cb000148ea21/cards"
+
+                    },
+
+"                    "customer": {
+
+Q                        "href": "http://user/customers/5fea31dcee11cb000148ea21"
+
+                    },
+
+                    "self": {
+
+Q                        "href": "http://user/customers/5fea31dcee11cb000148ea21"
+
+                    }
+
+                }
+
+            }
+
+
+        ]
+
+    }
+
+}
+
+z02:28:29.263 [Test worker] INFO com.socks.api.assertions.AssertableResponse - About to check condition status code is 200
+
+ü02:28:29.264 [Test worker] INFO com.socks.api.assertions.AssertableResponse - About to check condition body field [_embedded.customer] not an empty collection
